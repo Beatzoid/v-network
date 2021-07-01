@@ -1,0 +1,39 @@
+name: Node.js CI
+
+on:
+    push:
+        paths: ["*.js", "*.ts", "server/**", "client/**"]
+        branches: [master]
+    pull_request:
+        branches: [master]
+
+jobs:
+    build:
+        runs-on: ${{ matrix.os }}
+
+        strategy:
+            matrix:
+                node-version: [14.x, 15.x, 16.x]
+                os: [ubuntu-latest, windows-latest, macOS-latest]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: Install Typescript Globally
+              run: npm i -g typescript
+
+            - name: Install Server Dependencies
+              run: cd server && yarn install
+
+            - name: Compile Server Typescript
+              run: cd server && yarn build
+
+            - name: Install Client Dependencies
+              run: cd client && yarn install
+
+            - name: Build Next.js Project
+              run: cd client && yarn build

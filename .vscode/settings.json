@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.yarn": true,
+        "**/node_modules": true,
+        "**/yarn.lock": true,
+        "**/dist": true,
+        "**/build": true
+    }
+}
