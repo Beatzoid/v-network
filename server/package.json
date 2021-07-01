@@ -6,7 +6,7 @@
     "scripts": {
         "watch": "tsc -w",
         "dev": "nodemon",
-        "build": "lint --ext js,ts . && tsc"
+        "build": "eslint --ext js,ts . && tsc"
     },
     "keywords": [],
     "author": "Beatzoid",
