@@ -25,7 +25,7 @@ jobs:
     # 3. Invoke Scan with the github token. Leave the workspace empty to use relative url
 
     - name: Perform Scan
-      uses: ShiftLeftSec
+      uses: ShiftLeftSec@master
       with:
         output: reports
         # Scan auto-detects the languages in your project. To override uncomment the below variable and set the type
