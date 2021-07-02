@@ -36,5 +36,5 @@ jobs:
             - name: Install Client Dependencies
               run: cd client && yarn install
 
-            - name: Build Next.js Project
+            - name: Build React Project
               run: cd client && yarn build

@@ -6,19 +6,19 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 import logger from "./utils/logger";
+import authRoutes from "./routes/authRoute";
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-app.get("/", (_req, res) => {
-    return res.json({ msg: "Hello world!" });
-});
+// Routes
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+app.use("/api", authRoutes);
 
-const MONGO_URL = process.env.MONGODB_URL;
 mongoose.connect(
-    MONGO_URL!,
+    process.env.MONGODB_URL,
     {
         useCreateIndex: true,
         useFindAndModify: false,
