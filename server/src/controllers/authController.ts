@@ -1,5 +1,5 @@
 import argon2 from "argon2";
-import jwt from "jsonwebtoken";
+import jwt, { JwtPayload, VerifyErrors } from "jsonwebtoken";
 import { Request, Response } from "express";
 
 import logger from "../utils/logger";
@@ -126,13 +126,16 @@ export const authController = {
             jwt.verify(
                 refreshToken,
                 process.env.REFRESH_TOKEN_SECRET,
-                async (err, result) => {
+                async (
+                    err: VerifyErrors | null,
+                    result: JwtPayload | undefined
+                ) => {
                     if (err) {
                         logger.error(err);
                         return res.status(400).json({ err: "Unauthenticated" });
                     }
 
-                    const user = await Users.findById(result.id)
+                    const user = await Users.findById(result?.id)
                         .select("-password")
                         .populate("followers following", "-password");
 
@@ -141,13 +144,16 @@ export const authController = {
                             .status(400)
                             .json({ err: "User does not exist" });
 
-                    const accessToken = createAccessToken({ id: result.id });
+                    const accessToken = createAccessToken({ id: result?.id });
                     return res.json({ accessToken, user });
                 }
             );
         } catch (err) {
             return res.status(500).json({ err: err.message });
         }
+
+        // Typescript being annoying
+        return;
     }
 };
 
