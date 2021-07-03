@@ -295,15 +295,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/csurf@npm:^1":
-  version: 1.11.1
-  resolution: "@types/csurf@npm:1.11.1"
-  dependencies:
-    "@types/express-serve-static-core": "*"
-  checksum: 7bbff61e13c1b99e75b5f16c1f7fffa024c2c64ca9e4db926357ebfeca1ff617cb5f1d7cd9f2a389e68b44cd77f816cfbcbd73433eea7f829a3020db64611a01
-  languageName: node
-  linkType: hard
-
 "@types/dotenv-safe@npm:^8":
   version: 8.1.1
   resolution: "@types/dotenv-safe@npm:8.1.1"
@@ -313,7 +304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/express-serve-static-core@npm:*, @types/express-serve-static-core@npm:^4.17.18":
+"@types/express-serve-static-core@npm:^4.17.18":
   version: 4.17.22
   resolution: "@types/express-serve-static-core@npm:4.17.22"
   dependencies:
@@ -1223,29 +1214,6 @@ __metadata:
   version: 2.0.0
   resolution: "crypto-random-string@npm:2.0.0"
   checksum: 7bc19f6cafe3194a434198c9414941cc36d874e1f85b6fcba573b5623f77a440c0a10a94c0d0da26d7d23d85b6fe07354e589ef1a0fe2d7b32e0bab9e70ca4c1
-  languageName: node
-  linkType: hard
-
-"csrf@npm:3.1.0":
-  version: 3.1.0
-  resolution: "csrf@npm:3.1.0"
-  dependencies:
-    rndm: 1.2.0
-    tsscmp: 1.0.6
-    uid-safe: 2.1.5
-  checksum: 81ed32d3bb74806ad929aa590d0cbf8f41ae1d90ef0d9d51e82cd20b2e2262e9c3fd2565c4dc273d3cc116e29f6af19aa37e69f9307cf491b90cd3bdd9f83f4f
-  languageName: node
-  linkType: hard
-
-"csurf@npm:^1.11.0":
-  version: 1.11.0
-  resolution: "csurf@npm:1.11.0"
-  dependencies:
-    cookie: 0.4.0
-    cookie-signature: 1.0.6
-    csrf: 3.1.0
-    http-errors: ~1.7.3
-  checksum: cdd49264843a2c52e7ac7c36876aaf55e5291b9a198ac258e327c0c49824072a5d76c94cd0839f066df66a419befad7aa3b95b202fd01f06556dcce1f4bc1b77
   languageName: node
   linkType: hard
 
@@ -2228,7 +2196,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"http-errors@npm:~1.7.2, http-errors@npm:~1.7.3":
+"http-errors@npm:~1.7.2":
   version: 1.7.3
   resolution: "http-errors@npm:1.7.3"
   dependencies:
@@ -3728,13 +3696,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"random-bytes@npm:~1.0.0":
-  version: 1.0.0
-  resolution: "random-bytes@npm:1.0.0"
-  checksum: e60b4e1611b410b16dee4819040b19f787cce83e10f87518d0e0f807f2814b5f432d824740a79712903364ffc963c67ed1acbfb6d54201e9ab28fe80071617c9
-  languageName: node
-  linkType: hard
-
 "range-parser@npm:~1.2.1":
   version: 1.2.1
   resolution: "range-parser@npm:1.2.1"
@@ -3924,13 +3885,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"rndm@npm:1.2.0":
-  version: 1.2.0
-  resolution: "rndm@npm:1.2.0"
-  checksum: b085cdbb521044b4c7a63f56c3f8e7713efab15b5185fc4f43396425da7499b99b73dd2c65189d55271230839d1f36157871c72fdf1f17ead9e2a1c258e3569c
-  languageName: node
-  linkType: hard
-
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
   resolution: "run-parallel@npm:1.2.0"
@@ -4047,7 +4001,6 @@ fsevents@~2.3.2:
   dependencies:
     "@types/cookie-parser": ^1.4.2
     "@types/cors": ^2.8.10
-    "@types/csurf": ^1
     "@types/dotenv-safe": ^8
     "@types/express": ^4.17.12
     "@types/jsonwebtoken": ^8.5.2
@@ -4058,7 +4011,6 @@ fsevents@~2.3.2:
     babel-eslint: ^10.1.0
     cookie-parser: ^1.4.5
     cors: ^2.8.5
-    csurf: ^1.11.0
     dotenv-safe: ^8.2.0
     eslint: ^7.29.0
     eslint-config-google: ^0.14.0
@@ -4530,13 +4482,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"tsscmp@npm:1.0.6":
-  version: 1.0.6
-  resolution: "tsscmp@npm:1.0.6"
-  checksum: 1a5b76eb37c1a331f7e0b99f6414fdb1d58dffbc95301931a00e8728bc9fcb15b676d8e5eb2aecf884f424e8c9a218af388492cffe106539ffc0f8d09d8ab7c1
-  languageName: node
-  linkType: hard
-
 "tsutils@npm:^3.21.0":
   version: 3.21.0
   resolution: "tsutils@npm:3.21.0"
@@ -4607,15 +4552,6 @@ typescript@^4.3.5:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 7f0b8343f71ecac18095be1476b398aca420ab60dc207cc1efe078f381eef5527b80a518297720257114cdbda65612f8839e4b63e85dc95e67ac5cbbade8bdf0
-  languageName: node
-  linkType: hard
-
-"uid-safe@npm:2.1.5":
-  version: 2.1.5
-  resolution: "uid-safe@npm:2.1.5"
-  dependencies:
-    random-bytes: ~1.0.0
-  checksum: 3babb99505759403264600665e7e639ac8ab4a5e608bcc9442e35a59bc72c6c4c0e305de70612b7e3ab4866d5e3adeeb419a22f011b64d445039b947a33824ee
   languageName: node
   linkType: hard
 

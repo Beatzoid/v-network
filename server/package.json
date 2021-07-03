@@ -15,7 +15,6 @@
         "argon2": "^0.28.2",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
-        "csurf": "^1.11.0",
         "dotenv-safe": "^8.2.0",
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
@@ -25,7 +24,6 @@
     "devDependencies": {
         "@types/cookie-parser": "^1.4.2",
         "@types/cors": "^2.8.10",
-        "@types/csurf": "^1",
         "@types/dotenv-safe": "^8",
         "@types/express": "^4.17.12",
         "@types/jsonwebtoken": "^8.5.2",

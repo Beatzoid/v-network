@@ -33,3 +33,6 @@ code {
     width: 100%;
     margin: auto;
 }
+
+/* Auth */
+@import url("./styles/auth.css");

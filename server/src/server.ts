@@ -4,15 +4,12 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
-import csurf from "csurf";
-
 import logger from "./utils/logger";
 import authRoutes from "./routes/authRoute";
 
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(csurf({ cookie: true }));
 app.use(cors());
 
 // Routes
