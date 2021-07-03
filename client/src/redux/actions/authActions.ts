@@ -10,7 +10,6 @@ export const login =
             dispatch({ type: "NOTIFY", payload: { loading: true } });
             const res = await postDataAPI("login", data);
             localStorage.setItem("firstLogin", "true");
-            console.log(res);
 
             dispatch({
                 type: "AUTH",
