@@ -1,6 +1,8 @@
 import { Dispatch } from "redux";
 
-import { IAuthType, INotifyType, IUserLogin } from "../types";
+import { IAuthType, IUserLogin } from "../types/auth";
+import { INotifyType } from "../types/notify";
+
 import { postDataAPI } from "../../utils/fetchData";
 
 export const login =

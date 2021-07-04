@@ -16,3 +16,5 @@ const DataProvider = ({ children }: any) => {
 };
 
 export default DataProvider;
+
+export type RootState = ReturnType<typeof store.getState>;

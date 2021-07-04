@@ -1,4 +1,4 @@
-import { INotify, INotifyType } from "../types";
+import { INotify, INotifyType } from "../types/notify";
 
 const notifiyReducer = (state: INotify = {}, action: INotifyType) => {
     switch (action.type) {
