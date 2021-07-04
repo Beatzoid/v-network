@@ -30,14 +30,14 @@ const Login = () => {
                     MERN Social Media
                 </h3>
                 <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">
+                    <label htmlFor="email" className="form-label">
                         Email
                     </label>
                     <input
                         name="email"
                         type="email"
                         className="form-control"
-                        id="exampleInputEmail1"
+                        id="email"
                         aria-describedby="emailHelp"
                         onChange={handleChangeInput}
                         value={email}
@@ -48,10 +48,7 @@ const Login = () => {
                 </div>
 
                 <div className="mb-3">
-                    <label
-                        htmlFor="exampleInputPassword1"
-                        className="form-label"
-                    >
+                    <label htmlFor="password" className="form-label">
                         Password
                     </label>
 
@@ -60,7 +57,7 @@ const Login = () => {
                             name="password"
                             type={showPassword ? "text" : "password"}
                             className="form-control"
-                            id="exampleInputPassword1"
+                            id="password"
                             onChange={handleChangeInput}
                             value={password}
                         />
@@ -73,7 +70,7 @@ const Login = () => {
                 <button
                     type="submit"
                     className="btn btn-dark w-100"
-                    disabled={!(email && password)}
+                    disabled={email && password ? false : true}
                 >
                     Login
                 </button>

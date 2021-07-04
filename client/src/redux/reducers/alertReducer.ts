@@ -1,7 +1,7 @@
 import { GLOBALTYPES } from "../types/global";
-import { INotify, INotifyType } from "../types/notify";
+import { IAlert, IAlertType } from "../types/alert";
 
-const alertReducer = (state: INotify = {}, action: INotifyType) => {
+const alertReducer = (state: IAlert = {}, action: IAlertType) => {
     switch (action.type) {
         case GLOBALTYPES.ALERT:
             return action.payload;

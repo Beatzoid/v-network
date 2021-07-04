@@ -2,7 +2,9 @@
     width: 100%;
     min-height: 100vh;
     background: #fdfdfd;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .auth_page form {
@@ -11,10 +13,6 @@
     width: 100%;
     border: 1px solid #ddd;
     padding: 50px 25px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .auth_page form .pass {

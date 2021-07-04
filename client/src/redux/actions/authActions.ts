@@ -1,14 +1,15 @@
 import { Dispatch } from "redux";
 
-import { IAuthType, IUserLogin } from "../types/auth";
-import { INotifyType } from "../types/notify";
+import { IAuthType, IUserLogin, IUserRegister } from "../types/auth";
+import { IAlertType } from "../types/alert";
 
 import { postDataAPI } from "../../utils/fetchData";
 import { GLOBALTYPES } from "../types/global";
+import { validateRegister } from "../../utils/validators";
 
 export const login =
     (data: IUserLogin) =>
-    async (dispatch: Dispatch<INotifyType | IAuthType>) => {
+    async (dispatch: Dispatch<IAlertType | IAuthType>) => {
         try {
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
             const res = await postDataAPI("login", data);
@@ -31,7 +32,7 @@ export const login =
     };
 
 export const refreshToken =
-    () => async (dispatch: Dispatch<INotifyType | IAuthType>) => {
+    () => async (dispatch: Dispatch<IAlertType | IAuthType>) => {
         const firstLogin = localStorage.getItem("firstLogin");
         if (firstLogin) {
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
@@ -53,5 +54,37 @@ export const refreshToken =
                     payload: { error: err.response.data.msg }
                 });
             }
+        }
+    };
+
+export const register =
+    (data: IUserRegister) =>
+    async (dispatch: Dispatch<IAuthType | IAlertType>) => {
+        const errors = validateRegister(data);
+        if (errors.errorLength > 0)
+            return dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: errors.errors
+            });
+
+        try {
+            dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
+
+            const res = await postDataAPI("register", data);
+            localStorage.setItem("firstLogin", "true");
+
+            dispatch({
+                type: GLOBALTYPES.AUTH,
+                payload: { token: res.data.accessToken, user: res.data.user }
+            });
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { success: res.data.message }
+            });
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.msg }
+            });
         }
     };
