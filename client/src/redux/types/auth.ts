@@ -1,4 +1,4 @@
-export const AUTH = "AUTH";
+import { GLOBALTYPES } from "./global";
 
 export interface IUser {
     avatar: string;
@@ -12,12 +12,12 @@ export interface IUser {
 
 export interface IAuth {
     msg?: string;
-    access_token?: string;
+    token?: string;
     user?: IUser;
 }
 
 export interface IAuthType {
-    type: typeof AUTH;
+    type: typeof GLOBALTYPES.AUTH;
     payload: IAuth;
 }
 

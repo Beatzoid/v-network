@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
 import authReducer from "./authReducer";
-import notifiyReducer from "./notifyReducer";
+import alertReducer from "./alertReducer";
 
 export default combineReducers({
     auth: authReducer,
-    notify: notifiyReducer
+    alert: alertReducer
 });
