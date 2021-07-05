@@ -7,6 +7,7 @@ import Login from "./pages/login";
 import Home from "./pages/home";
 
 import Alert from "./components/alert/Alert";
+import Header from "./components/Header";
 
 import { useAppSelector } from "./redux/types/global";
 import { refreshToken } from "./redux/actions/authActions";
@@ -26,6 +27,7 @@ function App() {
             <input type="checkbox" id="theme" />
             <div className="App">
                 <div className="main">
+                    {auth.token && <Header />}
                     <Route
                         exact
                         path="/"

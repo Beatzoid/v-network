@@ -6,4 +6,5 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 export namespace GLOBALTYPES {
     export const AUTH = "AUTH";
     export const ALERT = "ALERT";
+    export const THEME = "THEME";
 }
