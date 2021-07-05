@@ -401,6 +401,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:14.x || 15.x":
+  version: 15.14.1
+  resolution: "@types/node@npm:15.14.1"
+  checksum: 6340f64e439381a4843ac9d8087d92370caf5fac44b296d83ddb93f0212a9f8ac3ca80b38958519dac4b104d7aa8e75e4a5ae8c3fce3b1bd3cc2c86c2a9bc8b9
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.9.6
   resolution: "@types/qs@npm:6.9.6"
@@ -3145,11 +3152,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.13.0, mongoose@npm:^5.13.0":
-  version: 5.13.0
-  resolution: "mongoose@npm:5.13.0"
+"mongoose@npm:5.13.2, mongoose@npm:^5.13.2":
+  version: 5.13.2
+  resolution: "mongoose@npm:5.13.2"
   dependencies:
     "@types/mongodb": ^3.5.27
+    "@types/node": 14.x || 15.x
     bson: ^1.1.4
     kareem: 2.3.2
     mongodb: 3.6.8
@@ -3161,7 +3169,7 @@ fsevents@~2.3.2:
     safe-buffer: 5.2.1
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: 16e8efe9b40f56caab732594865910af27718ca5aa6db2e3736b6266f2ef0bc8cc70844286424d54c9e319bfcf5c0008f9673de1b38c33c972b5dd62dcd10df5
+  checksum: 1b1d6c13e89108a92e39e0c9f95c005fa9d8da236e4eecbb5d670d45579a1cb137e6d22fec9e30e784ac937c1a46a47f894c5c883a17acdf79c6b80256a0102f
   languageName: node
   linkType: hard
 
@@ -4036,7 +4044,7 @@ fsevents@~2.3.2:
     eslint-plugin-import: ^2.23.4
     express: ^4.17.1
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.13.0
+    mongoose: ^5.13.2
     nodemon: ^2.0.9
     typescript: ^4.3.5
     winston: ^3.3.3
