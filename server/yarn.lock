@@ -371,12 +371,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^8.5.3":
-  version: 8.5.3
-  resolution: "@types/jsonwebtoken@npm:8.5.3"
+"@types/jsonwebtoken@npm:^8.5.4":
+  version: 8.5.4
+  resolution: "@types/jsonwebtoken@npm:8.5.4"
   dependencies:
     "@types/node": "*"
-  checksum: 84dd5238d86562f0b69deeddc6403acee6a5117abaede90bfcc99c0d943117840a78b8efad5d76df4c8189dcd00332c08180a0f7501efe1b4156a323de77ded4
+  checksum: 605ab698b007f04a1d1665b6af0dd31b0787c700c44dbca4474cebff6ae0e8435cc1166ae7d6895de3b6241f5a9ab62bea154ae5fdc7ac09cb13ab59dea4864d
   languageName: node
   linkType: hard
 
@@ -4042,7 +4042,7 @@ fsevents@~2.3.2:
     "@types/cors": ^2.8.11
     "@types/dotenv-safe": ^8
     "@types/express": ^4.17.13
-    "@types/jsonwebtoken": ^8.5.3
+    "@types/jsonwebtoken": ^8.5.4
     "@types/node": ^15.12.5
     "@typescript-eslint/eslint-plugin": ^4.28.2
     "@typescript-eslint/parser": ^4.28.2
