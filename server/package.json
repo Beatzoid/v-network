@@ -25,7 +25,7 @@
         "@types/cookie-parser": "^1.4.2",
         "@types/cors": "^2.8.11",
         "@types/dotenv-safe": "^8",
-        "@types/express": "^4.17.12",
+        "@types/express": "^4.17.13",
         "@types/jsonwebtoken": "^8.5.3",
         "@types/node": "^15.12.5",
         "@typescript-eslint/eslint-plugin": "^4.28.2",
