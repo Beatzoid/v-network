@@ -3283,9 +3283,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"nodemon@npm:^2.0.9":
-  version: 2.0.9
-  resolution: "nodemon@npm:2.0.9"
+"nodemon@npm:^2.0.10":
+  version: 2.0.10
+  resolution: "nodemon@npm:2.0.10"
   dependencies:
     chokidar: ^3.2.2
     debug: ^3.2.6
@@ -3299,7 +3299,7 @@ fsevents@~2.3.2:
     update-notifier: ^4.1.0
   bin:
     nodemon: bin/nodemon.js
-  checksum: bed92265bba3ed750b6d064bdf4f93d4a952948c24379e824f568bc48c336390d394c130aef32206d1cd8aa4d32395052326834a42ed11a8596b94b5a01ed1a8
+  checksum: 664e579d9585c7508a7678f67d098238ff892dae3d84198280cfc81164eedc5d9e77c01dd66e5ba08407b96401d0e875bb08cf7c53a1504e563b5748c897b92e
   languageName: node
   linkType: hard
 
@@ -4057,7 +4057,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     jsonwebtoken: ^8.5.1
     mongoose: ^5.13.2
-    nodemon: ^2.0.9
+    nodemon: ^2.0.10
     typescript: ^4.3.5
     winston: ^3.3.3
   languageName: unknown
