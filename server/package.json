@@ -23,7 +23,7 @@
     },
     "devDependencies": {
         "@types/cookie-parser": "^1.4.2",
-        "@types/cors": "^2.8.11",
+        "@types/cors": "^2.8.12",
         "@types/dotenv-safe": "^8",
         "@types/express": "^4.17.13",
         "@types/jsonwebtoken": "^8.5.4",
