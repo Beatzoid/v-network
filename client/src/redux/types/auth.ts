@@ -3,7 +3,8 @@ import { GLOBALTYPES } from "./global";
 export interface IUser {
     avatar: string;
     createdAt: string;
-    name: string;
+    username: string;
+    fullname: string;
     role: string;
     type: string;
     updatedAt: string;

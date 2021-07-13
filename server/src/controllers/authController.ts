@@ -5,7 +5,7 @@ import { Request, Response } from "express";
 import logger from "../utils/logger";
 import Users from "../models/userModel";
 
-export const authController = {
+const authController = {
     register: async (req: Request, res: Response) => {
         try {
             const { fullname, username, email, password, gender } = req.body;
@@ -168,3 +168,5 @@ const createRefreshToken = (id: unknown) => {
         expiresIn: "30d"
     });
 };
+
+export default authController;

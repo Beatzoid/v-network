@@ -51,7 +51,7 @@ export const refreshToken =
             } catch (err) {
                 dispatch({
                     type: GLOBALTYPES.ALERT,
-                    payload: { error: err.response.data.msg }
+                    payload: { error: err.response.data.err }
                 });
             }
         }

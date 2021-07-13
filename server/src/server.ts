@@ -4,8 +4,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+
 import logger from "./utils/logger";
-import authRoutes from "./routes/authRoute";
+
+import authRoutes from "./routes/authRoutes";
+import userRoutes from "./routes/userRoutes";
 
 const app = express();
 app.use(express.json());
@@ -13,8 +16,8 @@ app.use(cookieParser());
 app.use(cors());
 
 // Routes
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 app.use("/api", authRoutes);
+app.use("/api", userRoutes);
 
 mongoose.connect(
     process.env.MONGODB_URL,

@@ -1,13 +1,19 @@
-import { useAppSelector } from "../redux/types/global";
+import { useAppSelector } from "../../redux/types/global";
 
-const Avatar = ({ src }: { src: string }) => {
+const Avatar = ({
+    src,
+    size
+}: {
+    src: string;
+    size: "small-avatar" | "medium-avatar" | "big-avatar";
+}) => {
     const { theme } = useAppSelector((state) => state);
 
     return (
         <img
             src={src}
             alt="avatar"
-            className="avatar"
+            className={`avatar ${size}`}
             style={{
                 filter: `${theme ? "invert(1)" : "invert(0)"}`
             }}
