@@ -90,6 +90,15 @@
     margin-top: 3px;
 }
 
+.header .search_form .loading {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header .menu {
