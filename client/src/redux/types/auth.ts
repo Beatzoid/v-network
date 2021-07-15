@@ -2,12 +2,19 @@ import { GLOBALTYPES } from "./global";
 
 export interface IUser {
     avatar: string;
+    email: string;
     createdAt: string;
     username: string;
     fullname: string;
+    followers: IUser[];
+    following: IUser[];
     role: string;
     type: string;
     updatedAt: string;
+    address: string;
+    website: string;
+    mobile: string;
+    story: string;
     _id: string;
 }
 

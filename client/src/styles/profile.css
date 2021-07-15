@@ -1,0 +1,48 @@
+/* Info */
+.info {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.info_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.info_content {
+    min-width: 250px;
+    max-width: 400px;
+    width: 100%;
+    flex: 1;
+    opacity: 0.7;
+    margin: 0 15px;
+}
+
+.info_content_title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info_content_title h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    transform: translateY(4px);
+    flex: 3;
+}
+
+.info_content_title button {
+    flex: 2;
+}
+
+.info_container .follow_btn {
+    color: teal;
+    cursor: pointer;
+}
+
+.info_container .follow_btn span:hover {
+    text-decoration: underline;
+}

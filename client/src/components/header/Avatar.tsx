@@ -5,7 +5,7 @@ const Avatar = ({
     size
 }: {
     src: string;
-    size: "small-avatar" | "medium-avatar" | "big-avatar";
+    size: "small-avatar" | "medium-avatar" | "big-avatar" | "huge-avatar";
 }) => {
     const { theme } = useAppSelector((state) => state);
 
