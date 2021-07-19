@@ -9,7 +9,15 @@ const Profile = () => {
 
     return (
         <div className="profile">
-            {profile.loading ? <img src={LoadIcon} alt="Loading" /> : <Info />}
+            {profile.loading ? (
+                <img
+                    className="d-block mx-auto my-4"
+                    src={LoadIcon}
+                    alt="Loading"
+                />
+            ) : (
+                <Info />
+            )}
             <Posts />
         </div>
     );

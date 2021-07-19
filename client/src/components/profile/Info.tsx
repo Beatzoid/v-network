@@ -5,9 +5,11 @@ import { useParams } from "react-router-dom";
 import { IAuth, IUser } from "../../redux/types/auth";
 import { useAppSelector } from "../../redux/types/global";
 import { getProfileUsers } from "../../redux/actions/profileActions";
+import { IProfile } from "../../redux/types/profile";
 
 import Avatar from "../header/Avatar";
-import { IProfile } from "../../redux/types/profile";
+import EditProfile from "./EditProfile";
+import FollowButton from "../FollowButton";
 
 const Info = () => {
     const { id } = useParams<{ id: string }>();
@@ -16,6 +18,7 @@ const Info = () => {
     const dispatch = useDispatch();
 
     const [userData, setUserData] = useState<IUser[]>([]);
+    const [onEdit, setOnEdit] = useState(false);
 
     useEffect(() => {
         if (id === auth.user?._id) {
@@ -36,9 +39,16 @@ const Info = () => {
                     <div className="info_content">
                         <div className="info_content_title">
                             <h2>{user.username}</h2>
-                            <button className="btn btn-outline-info">
-                                Edit Profile
-                            </button>
+                            {user._id === auth.user?._id ? (
+                                <button
+                                    className="btn btn-outline-info"
+                                    onClick={() => setOnEdit(true)}
+                                >
+                                    Edit Profile
+                                </button>
+                            ) : (
+                                <FollowButton />
+                            )}
                         </div>
 
                         <div className="follow_btn">
@@ -60,6 +70,8 @@ const Info = () => {
                         </a>
                         <p>{user.story}</p>
                     </div>
+
+                    {onEdit && <EditProfile setOnEdit={setOnEdit} />}
                 </div>
             ))}
         </div>
