@@ -6,7 +6,8 @@
     "scripts": {
         "watch": "tsc -w",
         "dev": "nodemon",
-        "build": "tsc"
+        "build": "tsc",
+        "start": "node dist/server.js"
     },
     "keywords": [],
     "author": "Beatzoid",
