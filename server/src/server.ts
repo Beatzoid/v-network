@@ -13,14 +13,7 @@ import userRoutes from "./routes/userRoutes";
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-    cors({
-        origin: [
-            "http://localhost:3000",
-            "https://beat-social-media.vercel.app/"
-        ]
-    })
-);
+app.use(cors());
 
 // Routes
 app.use("/api", authRoutes);
