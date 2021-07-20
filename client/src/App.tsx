@@ -12,7 +12,7 @@ import Register from "./pages/register";
 import Alert from "./components/alert/Alert";
 import Header from "./components/header/Header";
 
-import { useAppSelector } from "./redux/types/global";
+import { GLOBALTYPES, useAppSelector } from "./redux/types/global";
 import { refreshToken } from "./redux/actions/authActions";
 
 function App() {
@@ -21,6 +21,13 @@ function App() {
 
     useEffect(() => {
         dispatch(refreshToken());
+        const darkMode = JSON.parse(localStorage.getItem("darkmode")!);
+        if (darkMode) document.getElementById("theme")?.click();
+
+        dispatch({
+            type: GLOBALTYPES.THEME,
+            payload: darkMode
+        });
     }, [dispatch]);
 
     return (
