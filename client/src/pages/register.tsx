@@ -41,9 +41,7 @@ const Register = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="mb-4 text-uppercase text-center">
-                    MERN Social Media
-                </h3>
+                <h3 className="mb-4 text-uppercase text-center">V-Network</h3>
 
                 <div className="mb-3">
                     <label htmlFor="fullname" className="form-label">
@@ -217,8 +215,7 @@ const Register = () => {
                 </button>
 
                 <p className="my-3">
-                    Already have an account? Login{" "}
-                    <Link to="/">here</Link>
+                    Already have an account? Login <Link to="/">here</Link>
                 </p>
             </form>
         </div>

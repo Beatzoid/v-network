@@ -14,7 +14,7 @@ const Header = () => {
                         className="logo"
                     >
                         <h1 className="navbar-brand text-uppercase p-0 m-0">
-                            MERN Social Media
+                            V-Network
                         </h1>
                     </Link>
 

@@ -1,4 +1,4 @@
-# Social Media App
+# V-Network
 
 A social media app made using the MERN stack
 

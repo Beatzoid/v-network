@@ -33,9 +33,7 @@ const Login = () => {
     return (
         <div className="auth_page">
             <form onSubmit={handleSubmit}>
-                <h3 className="mb-4 text-uppercase text-center">
-                    MERN Social Media
-                </h3>
+                <h3 className="mb-4 text-uppercase text-center">V-Network</h3>
                 <div className="mb-3">
                     <label htmlFor="email" className="form-label">
                         Email
