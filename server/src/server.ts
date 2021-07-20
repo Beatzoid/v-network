@@ -9,6 +9,7 @@ import logger from "./utils/logger";
 
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
+import { sanitizeInputMW } from "./middleware/sanitizeInputMiddleware";
 
 const app = express();
 app.use(
@@ -18,8 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
-app.use("/api", authRoutes);
-app.use("/api", userRoutes);
+app.use("/api", sanitizeInputMW, authRoutes);
+app.use("/api", sanitizeInputMW, userRoutes);
 
 mongoose.connect(
     process.env.MONGODB_URL,

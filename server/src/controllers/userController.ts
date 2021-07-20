@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 
 import Users from "../models/userModel";
 
+import { sanitizeInput } from "../utils/sanitizeInput";
+
 const userController = {
     searchUser: async (req: Request, res: Response) => {
         try {
@@ -28,6 +30,8 @@ const userController = {
     },
     updateUser: async (req: Request, res: Response) => {
         try {
+            sanitizeInput(req.body);
+
             const { avatar, fullname, story, website, gender } = req.body;
             if (!fullname)
                 return res
