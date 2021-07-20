@@ -6,6 +6,7 @@ export interface IUser {
     createdAt: string;
     username: string;
     fullname: string;
+    gender: string;
     followers: IUser[];
     following: IUser[];
     role: string;

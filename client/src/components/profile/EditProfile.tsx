@@ -1,6 +1,7 @@
 import {
     ChangeEvent,
     Dispatch,
+    FormEvent,
     SetStateAction,
     useEffect,
     useState
@@ -10,6 +11,8 @@ import { useDispatch } from "react-redux";
 
 import { IUser } from "../../redux/types/auth";
 import { GLOBALTYPES, useAppSelector } from "../../redux/types/global";
+import { updateUserProfile } from "../../redux/actions/profileActions";
+
 import { checkImage } from "../../utils/imageUpload";
 
 interface EditProfileProps {
@@ -26,10 +29,10 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
         story: "",
         gender: ""
     };
-    const [userData, setUserData] = useState<Record<string, string> | IUser>(
+    const [userData, setUserData] = useState<typeof initialState | IUser>(
         initialState
     );
-    const { fullname, website, story } = userData;
+    const { fullname, website, story, gender } = userData;
 
     const [avatar, setAvatar] = useState<string | File>("");
 
@@ -49,6 +52,11 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
         setUserData({ ...userData, [name]: value });
     };
 
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        dispatch(updateUserProfile({ userData, avatar, auth }));
+    };
+
     useEffect(() => {
         setUserData(auth.user!);
     }, [auth.user]);
@@ -62,7 +70,7 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
                 Close
             </button>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="info_avatar">
                     <img
                         src={
@@ -144,6 +152,7 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
                         <select
                             name="gender"
                             id="gender"
+                            value={gender}
                             className="custom-select text-captialize"
                             onChange={handleInputChange}
                         >

@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema(
         avatar: {
             type: String,
             default:
-                "https://res.cloudinary.com/beatzoid/image/upload/v1625167768/mern-social-media/avatars/default_xcfxgb.png"
+                "https://res.cloudinary.com/beatzoid/image/upload/v1626791354/v-network/avatars/default_profile_picture_bgcalh.png"
         },
         role: {
             type: String,

@@ -30,12 +30,18 @@ export const putDataAPI = async (url: string, data: any, token: string) => {
     return res;
 };
 
-export const patchDataAPI = async (url: string, data: any, token: string) => {
-    const res = await axios.patch(`/api/${url}`, data, {
-        headers: {
-            Authentication: token
-        }
-    });
+export const patchDataAPI = async (url: string, data: any, token?: string) => {
+    const res = await axios.patch(
+        `/api/${url}`,
+        data,
+        token
+            ? {
+                  headers: {
+                      Authentication: token
+                  }
+              }
+            : undefined
+    );
     return res;
 };
 

@@ -25,6 +25,24 @@ const userController = {
         } catch (err) {
             return res.status(500).json({ msg: err.message });
         }
+    },
+    updateUser: async (req: Request, res: Response) => {
+        try {
+            const { avatar, fullname, story, website, gender } = req.body;
+            if (!fullname)
+                return res
+                    .status(400)
+                    .json({ msg: "Please add your full name" });
+
+            await Users.findOneAndUpdate(
+                { _id: req.user._id },
+                { avatar, fullname, story, website, gender }
+            );
+
+            return res.json({ msg: "Updated successfully!" });
+        } catch (err) {
+            return res.status(500).json({ err: err.message });
+        }
     }
 };
 
