@@ -60,10 +60,6 @@ const Info = () => {
                             </span>
                         </div>
 
-                        <h6>
-                            {user.fullname} {user.mobile}
-                        </h6>
-                        <p className="m-0">{user.address}</p>
                         <h6>{user.email}</h6>
                         <a href={user.website} target="_blank" rel="noreferrer">
                             {user.website}

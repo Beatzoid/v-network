@@ -8,8 +8,6 @@ export interface User {
     avatar: string;
     role: string;
     gender: string;
-    mobile: string;
-    address: string;
     story: string;
     website: string;
     followers: ObjectId[];

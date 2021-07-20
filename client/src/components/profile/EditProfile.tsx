@@ -22,8 +22,6 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
 
     const initialState = {
         fullname: "",
-        mobile: "",
-        address: "",
         website: "",
         story: "",
         gender: ""
@@ -31,7 +29,7 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
     const [userData, setUserData] = useState<Record<string, string> | IUser>(
         initialState
     );
-    const { fullname, mobile, address, website, story } = userData;
+    const { fullname, website, story } = userData;
 
     const [avatar, setAvatar] = useState<string | File>("");
 
@@ -110,28 +108,6 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
                         >
                             {fullname.length}/25
                         </small>
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="mobile">Mobile</label>
-                        <input
-                            type="text"
-                            name="mobile"
-                            value={mobile}
-                            className="form-control"
-                            onChange={handleInputChange}
-                        />
-                    </div>
-
-                    <div className="form-group">
-                        <label htmlFor="address">Address</label>
-                        <input
-                            type="text"
-                            name="address"
-                            value={address}
-                            className="form-control"
-                            onChange={handleInputChange}
-                        />
                     </div>
 
                     <div className="form-group">

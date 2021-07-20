@@ -11,9 +11,7 @@ export interface IUser {
     role: string;
     type: string;
     updatedAt: string;
-    address: string;
     website: string;
-    mobile: string;
     story: string;
     _id: string;
 }
