@@ -6,6 +6,8 @@ import rootReducer from "./reducers";
 
 import { composeWithDevTools } from "redux-devtools-extension";
 
+import { IProfile } from "./types/profile";
+
 const store = createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(thunk))
@@ -17,4 +19,6 @@ const DataProvider = ({ children }: any) => {
 
 export default DataProvider;
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = {
+    profile: IProfile;
+} & Omit<ReturnType<typeof store.getState>, "profile">;

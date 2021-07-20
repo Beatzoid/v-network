@@ -2,10 +2,9 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { IAuth, IUser } from "../../redux/types/auth";
+import { IUser } from "../../redux/types/auth";
 import { useAppSelector } from "../../redux/types/global";
 import { getProfileUsers } from "../../redux/actions/profileActions";
-import { IProfile } from "../../redux/types/profile";
 
 import Avatar from "../header/Avatar";
 import EditProfile from "./EditProfile";
@@ -13,8 +12,7 @@ import FollowButton from "../FollowButton";
 
 const Info = () => {
     const { id } = useParams<{ id: string }>();
-    const { auth, profile }: { auth: IAuth; profile: IProfile } =
-        useAppSelector((state) => state);
+    const { auth, profile } = useAppSelector((state) => state);
     const dispatch = useDispatch();
 
     const [userData, setUserData] = useState<IUser[]>([]);
@@ -47,7 +45,7 @@ const Info = () => {
                                     Edit Profile
                                 </button>
                             ) : (
-                                <FollowButton />
+                                <FollowButton user={user} />
                             )}
                         </div>
 
