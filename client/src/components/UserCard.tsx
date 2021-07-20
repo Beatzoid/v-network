@@ -1,3 +1,4 @@
+import { Dispatch } from "react";
 import { Link } from "react-router-dom";
 
 import { IUser } from "../redux/types/auth";
@@ -5,17 +6,35 @@ import Avatar from "./header/Avatar";
 
 interface UserCardProps {
     user: IUser;
-    border: string;
+    border?: string;
     handleClose?: () => void;
+    setShowFollowers?: Dispatch<React.SetStateAction<boolean>>;
+    setShowFollowing?: Dispatch<React.SetStateAction<boolean>>;
+    children?: any;
 }
 
-const UserCard = ({ user, border, handleClose }: UserCardProps) => {
+const UserCard = ({
+    user,
+    border,
+    handleClose,
+    children,
+    setShowFollowers,
+    setShowFollowing
+}: UserCardProps) => {
+    const handleCloseAll = () => {
+        if (handleClose) handleClose();
+        if (setShowFollowers) setShowFollowers(false);
+        if (setShowFollowing) setShowFollowing(false);
+    };
+
     return (
-        <div className={`d-flex p-2 align-items-center ${border}`}>
+        <div
+            className={`d-flex p-2 align-items-center justify-content-between ${border}`}
+        >
             <div>
                 <Link
                     to={`/profile/${user._id}`}
-                    onClick={handleClose}
+                    onClick={handleCloseAll}
                     className="d-flex align-items-center"
                 >
                     <Avatar src={user.avatar} size="big-avatar" />
@@ -29,6 +48,8 @@ const UserCard = ({ user, border, handleClose }: UserCardProps) => {
                     </div>
                 </Link>
             </div>
+
+            {children}
         </div>
     );
 };

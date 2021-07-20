@@ -19,14 +19,6 @@
 
 /* Header Menu */
 
-.header .menu li {
-    opacity: 0.5;
-}
-
-.header .menu li.active {
-    opacity: 1;
-}
-
 .header .menu .material-icons {
     font-size: 30px;
 }

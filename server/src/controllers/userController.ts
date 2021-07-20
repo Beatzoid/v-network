@@ -19,9 +19,9 @@ const userController = {
     },
     getUser: async (req: Request, res: Response) => {
         try {
-            const user = await Users.findById(req.params.id).select(
-                "-password"
-            );
+            const user = await Users.findById(req.params.id)
+                .select("-password")
+                .populate("followers following", "-password");
             if (!user) return res.status(404).json({ msg: "User not found" });
             return res.json({ user });
         } catch (err) {
@@ -44,6 +44,55 @@ const userController = {
             );
 
             return res.json({ msg: "Updated successfully!" });
+        } catch (err) {
+            return res.status(500).json({ err: err.message });
+        }
+    },
+    follow: async (req: Request, res: Response) => {
+        try {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            const user = await Users.find({
+                _id: req.params.id,
+                followers: req.user._id
+            });
+            if (user.length > 0)
+                return res
+                    .status(400)
+                    .json({ err: "You already followed this user" });
+
+            await Users.findOneAndUpdate(
+                { _id: req.params.id },
+                { $push: { followers: req.user._id } },
+                { new: true }
+            ).populate("followers following", "-password");
+
+            await Users.findOneAndUpdate(
+                { _id: req.user._id },
+                { $push: { following: req.params.id } },
+                { new: true }
+            );
+
+            return res.json({ msg: "Successfully followed" });
+        } catch (err) {
+            return res.status(500).json({ err: err.message });
+        }
+    },
+    unfollow: async (req: Request, res: Response) => {
+        try {
+            await Users.findOneAndUpdate(
+                { _id: req.params.id },
+                { $pull: { followers: req.user._id } },
+                { new: true }
+            );
+
+            await Users.findOneAndUpdate(
+                { _id: req.params.id },
+                { $pull: { following: req.params.id } },
+                { new: true }
+            );
+
+            return res.json({ msg: "Successfully unfollowed" });
         } catch (err) {
             return res.status(500).json({ err: err.message });
         }

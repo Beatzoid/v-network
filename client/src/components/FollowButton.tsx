@@ -11,6 +11,7 @@ interface FollowButtonProps {
 
 const FollowButton = ({ user }: FollowButtonProps) => {
     const [followed, setFollowed] = useState(false);
+    const [load, setLoad] = useState(false);
 
     const dispatch = useDispatch();
     const { auth, profile } = useAppSelector((state) => state);
@@ -21,14 +22,22 @@ const FollowButton = ({ user }: FollowButtonProps) => {
         }
     }, [auth.user?.following, user._id]);
 
-    const handleFollow = () => {
+    const handleFollow = async () => {
+        if (load) return;
+
         setFollowed(true);
-        dispatch(follow({ users: profile.users, user, auth }));
+        setLoad(true);
+        await dispatch(follow({ users: profile.users, user, auth }));
+        setLoad(false);
     };
 
-    const handleUnfollow = () => {
+    const handleUnfollow = async () => {
+        if (load) return;
+
         setFollowed(false);
-        dispatch(unfollow({ users: profile.users, user, auth }));
+        setLoad(true);
+        await dispatch(unfollow({ users: profile.users, user, auth }));
+        setLoad(false);
     };
 
     return (

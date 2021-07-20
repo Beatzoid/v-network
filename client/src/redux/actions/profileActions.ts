@@ -97,10 +97,22 @@ export const updateUserProfile =
 
 export const follow =
     ({ users, user, auth }: { users: IUser[]; user: IUser; auth: IAuth }) =>
-    async (dispatch: Dispatch<IFollowType | IAuthType>) => {
-        let newUser = { ...user, followers: [...user.followers, auth.user!] };
+    async (dispatch: Dispatch<IFollowType | IAuthType | IAlertType>) => {
+        let newUser: any;
+        if (users.every((item) => item._id !== user._id)) {
+            newUser = { ...user, followers: [...user.followers, auth.user!] };
+        } else {
+            users.forEach((item) => {
+                if (item._id === user._id) {
+                    newUser = {
+                        ...item,
+                        followers: [...user.followers, auth.user!]
+                    };
+                }
+            });
+        }
 
-        dispatch({ type: GLOBALTYPES.FOLLOW, payload: newUser });
+        dispatch({ type: GLOBALTYPES.FOLLOW, payload: newUser! });
 
         dispatch({
             type: GLOBALTYPES.AUTH,
@@ -112,17 +124,38 @@ export const follow =
                 }
             }
         });
+
+        try {
+            await patchDataAPI(`user/${user._id}/follow`, null, auth.token);
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.err }
+            });
+        }
     };
 
 export const unfollow =
     ({ users, user, auth }: { users: IUser[]; user: IUser; auth: IAuth }) =>
-    async (dispatch: Dispatch<IFollowType | IAuthType>) => {
-        let newUser = {
-            ...user,
-            followers: deleteData(user.followers, auth.user?._id!)
-        };
+    async (dispatch: Dispatch<IFollowType | IAuthType | IAlertType>) => {
+        let newUser: any;
+        if (users.every((item) => item._id !== user._id)) {
+            newUser = {
+                ...user,
+                followers: deleteData(user.followers, auth.user?._id!)
+            };
+        } else {
+            users.forEach((item) => {
+                if (item._id === user._id) {
+                    newUser = {
+                        ...item,
+                        followers: deleteData(item.followers, auth.user?._id!)
+                    };
+                }
+            });
+        }
 
-        dispatch({ type: GLOBALTYPES.UNFOLLOW, payload: newUser });
+        dispatch({ type: GLOBALTYPES.UNFOLLOW, payload: newUser! });
 
         dispatch({
             type: GLOBALTYPES.AUTH,
@@ -130,8 +163,17 @@ export const unfollow =
                 ...auth,
                 user: {
                     ...auth.user!,
-                    following: deleteData(auth.user?.following!, newUser._id)
+                    following: deleteData(auth.user?.following!, newUser?._id!)
                 }
             }
         });
+
+        try {
+            await patchDataAPI(`user/${user._id}/unfollow`, null, auth.token);
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.err }
+            });
+        }
     };
