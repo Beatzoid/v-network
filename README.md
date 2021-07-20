@@ -14,7 +14,7 @@ A social media app made using the MERN stack
 
 # Demo
 
-Soon
+[Here](https://v-network.vercel.app/)
 
 # Credit
 
