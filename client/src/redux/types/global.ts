@@ -9,4 +9,6 @@ export namespace GLOBALTYPES {
     export const THEME = "THEME";
     export const LOADING = "LOADING";
     export const GET_USER = "GET_USER";
+    export const FOLLOW = "FOLLOW";
+    export const UNFOLLOW = "UNFOLLOW";
 }

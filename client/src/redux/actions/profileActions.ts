@@ -4,9 +4,11 @@ import { IAlertType } from "../types/alert";
 import { IAuth, IAuthType, IUser } from "../types/auth";
 import { GLOBALTYPES } from "../types/global";
 import { IProfileType } from "../types/profile";
+import { IFollowType } from "../types/follow";
 
 import { getDataAPI, patchDataAPI } from "../../utils/fetchData";
 import { imageUpload } from "../../utils/imageUpload";
+import { deleteData } from "../utils/modifyData";
 
 export const getProfileUsers =
     ({ users, id, auth }: { users: IUser[]; id: string; auth: IAuth }) =>
@@ -91,4 +93,45 @@ export const updateUserProfile =
                 payload: { error: err.response.data.err }
             });
         }
+    };
+
+export const follow =
+    ({ users, user, auth }: { users: IUser[]; user: IUser; auth: IAuth }) =>
+    async (dispatch: Dispatch<IFollowType | IAuthType>) => {
+        let newUser = { ...user, followers: [...user.followers, auth.user!] };
+
+        dispatch({ type: GLOBALTYPES.FOLLOW, payload: newUser });
+
+        dispatch({
+            type: GLOBALTYPES.AUTH,
+            payload: {
+                ...auth,
+                user: {
+                    ...auth.user!,
+                    following: [...auth.user!.following, user]
+                }
+            }
+        });
+    };
+
+export const unfollow =
+    ({ users, user, auth }: { users: IUser[]; user: IUser; auth: IAuth }) =>
+    async (dispatch: Dispatch<IFollowType | IAuthType>) => {
+        let newUser = {
+            ...user,
+            followers: deleteData(user.followers, auth.user?._id!)
+        };
+
+        dispatch({ type: GLOBALTYPES.UNFOLLOW, payload: newUser });
+
+        dispatch({
+            type: GLOBALTYPES.AUTH,
+            payload: {
+                ...auth,
+                user: {
+                    ...auth.user!,
+                    following: deleteData(auth.user?.following!, newUser._id)
+                }
+            }
+        });
     };
