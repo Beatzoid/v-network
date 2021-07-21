@@ -10,12 +10,22 @@ export const checkImage = (file: File) => {
     return error;
 };
 
-export const imageUpload = async (images: Array<string | File>) => {
+export const imageUpload = async (images: any[], type: "avatar" | "post") => {
     let imgArr = [];
     for (const item of images) {
         const formData = new FormData();
-        formData.append("file", item);
-        formData.append("upload_preset", "v-network");
+
+        if (item.camera) {
+            formData.append("file", item.camera);
+        } else {
+            formData.append("file", item);
+        }
+
+        if (type === "avatar") {
+            formData.append("upload_preset", "v-network-avatar");
+        } else if (type === "post") {
+            formData.append("upload_preset", "v-network-post");
+        }
         formData.append("cloud_name", "beatzoid");
 
         const res = await fetch(

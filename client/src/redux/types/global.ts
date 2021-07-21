@@ -8,7 +8,12 @@ export namespace GLOBALTYPES {
     export const ALERT = "ALERT";
     export const THEME = "THEME";
     export const LOADING = "LOADING";
+
     export const GET_USER = "GET_USER";
+
     export const FOLLOW = "FOLLOW";
     export const UNFOLLOW = "UNFOLLOW";
+
+    export const STATUS = "STATUS";
+    export const CREATE_POST = "CREATE_POST";
 }

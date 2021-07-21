@@ -9,6 +9,17 @@ export const initSentry = () => {
             new RewriteFrames({
                 root: global.__rootdir__
             })
-        ]
+        ],
+        beforeSend(event, hint) {
+            const error = hint?.originalException as Error;
+            console.log(error);
+            if (
+                error.message.includes("EADDRINUSE") ||
+                error.message.includes("i/o error")
+            )
+                return null;
+
+            return event;
+        }
     });
 };

@@ -1,4 +1,4 @@
-import { ObjectId } from "mongoose";
+import { Document, ObjectId } from "mongoose";
 
 export interface User {
     _id: string;
@@ -13,8 +13,17 @@ export interface User {
     website: string;
     followers: ObjectId[];
     following: ObjectId[];
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    _doc: any;
+    _doc: Document;
+}
+
+export interface Post {
+    content: string;
+    images: string[];
+    likes: User[];
+    comments: Comment[];
+}
+export interface Comment {
+    something: string;
 }
 
 declare module "express" {

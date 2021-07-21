@@ -12,6 +12,8 @@ import { initSentry } from "./utils/sentry";
 
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
+import postRoutes from "./routes/postRouter";
+
 import { sanitizeInputMW } from "./middleware/sanitizeInputMiddleware";
 
 if (process.env.ENABLE_SENTRY === "true") initSentry();
@@ -24,6 +26,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Routes
+app.use("/api", postRoutes);
 app.use("/api", sanitizeInputMW, authRoutes);
 app.use("/api", sanitizeInputMW, userRoutes);
 

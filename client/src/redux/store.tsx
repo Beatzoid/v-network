@@ -21,4 +21,5 @@ export default DataProvider;
 
 export type RootState = {
     profile: IProfile;
-} & Omit<ReturnType<typeof store.getState>, "profile">;
+    status: boolean;
+} & Omit<ReturnType<typeof store.getState>, "profile" | "status">;

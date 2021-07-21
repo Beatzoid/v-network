@@ -62,7 +62,7 @@ export const updateUserProfile =
             let media: any;
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
 
-            if (avatar) media = await imageUpload([avatar]);
+            if (avatar) media = await imageUpload([avatar], "avatar");
 
             await patchDataAPI(
                 "user",

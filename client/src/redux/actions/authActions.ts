@@ -26,7 +26,7 @@ export const login =
         } catch (err) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
-                payload: { error: err.response.data.msg }
+                payload: { error: err.response.data.err }
             });
         }
     };
@@ -84,7 +84,7 @@ export const register =
         } catch (err) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
-                payload: { error: err.response.data.msg }
+                payload: { error: err.response.data.err }
             });
         }
     };
@@ -98,7 +98,7 @@ export const logout =
         } catch (err) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
-                payload: { error: err.response.data.msg }
+                payload: { error: err.response.data.err }
             });
         }
     };
