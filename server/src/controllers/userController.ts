@@ -96,7 +96,7 @@ const userController = {
             );
 
             await Users.findOneAndUpdate(
-                { _id: req.params.id },
+                { _id: req.user._id },
                 { $pull: { following: req.params.id } },
                 { new: true }
             );
