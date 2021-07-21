@@ -1,3 +1,5 @@
+global.__rootdir__ = __dirname || process.cwd();
+
 import "dotenv-safe/config";
 
 import express from "express";
@@ -6,10 +8,13 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 import logger from "./utils/logger";
+import { initSentry } from "./utils/sentry";
 
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
 import { sanitizeInputMW } from "./middleware/sanitizeInputMiddleware";
+
+if (process.env.ENABLE_SENTRY === "true") initSentry();
 
 const app = express();
 app.use(

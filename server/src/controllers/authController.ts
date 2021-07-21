@@ -3,6 +3,8 @@ import jwt, { JwtPayload, VerifyErrors } from "jsonwebtoken";
 import { Request, Response } from "express";
 
 import logger from "../utils/logger";
+import { handleError } from "../utils/handleError";
+
 import Users from "../models/userModel";
 
 const authController = {
@@ -63,9 +65,10 @@ const authController = {
                 }
             });
         } catch (err) {
-            logger.error(err);
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     login: async (req: Request, res: Response) => {
         try {
@@ -105,17 +108,20 @@ const authController = {
                 }
             });
         } catch (err) {
-            logger.error(err);
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     logout: async (_req: Request, res: Response) => {
         try {
             res.clearCookie("refreshtoken", { path: "/api/refresh_token" });
             return res.json({ msg: "Logged out successfully" });
         } catch (err) {
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     generateAccessToken: async (req: Request, res: Response) => {
         try {
@@ -149,7 +155,7 @@ const authController = {
                 }
             );
         } catch (err) {
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
 
         // Typescript being annoying

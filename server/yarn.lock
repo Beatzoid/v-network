@@ -246,6 +246,100 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sentry/core@npm:6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/core@npm:6.9.0"
+  dependencies:
+    "@sentry/hub": 6.9.0
+    "@sentry/minimal": 6.9.0
+    "@sentry/types": 6.9.0
+    "@sentry/utils": 6.9.0
+    tslib: ^1.9.3
+  checksum: 4e7931f33347c6fe8aba30264ad0293e36e9991e00de2f5989aee10700aeb99fabe881529695202b8dc4a27834862176b67febbb3732fa17264da3aca1b681fe
+  languageName: node
+  linkType: hard
+
+"@sentry/hub@npm:6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/hub@npm:6.9.0"
+  dependencies:
+    "@sentry/types": 6.9.0
+    "@sentry/utils": 6.9.0
+    tslib: ^1.9.3
+  checksum: e774c9433d087e78c8bd3b0be8226df77d5d410527e4ee8c3408145695bdf52304541da405c66c869d2e2d2b2d7d0408b89e3aa6f7a694a8b75bb77c8d7e0a55
+  languageName: node
+  linkType: hard
+
+"@sentry/integrations@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/integrations@npm:6.9.0"
+  dependencies:
+    "@sentry/types": 6.9.0
+    "@sentry/utils": 6.9.0
+    localforage: ^1.8.1
+    tslib: ^1.9.3
+  checksum: e75809333f132230c51a2dbda4c24d264981097b4ed93caf20252fd0d478be2be2df489d0816ef1e30948448baaf275d4e09c4a82253ba161da18ccecbe2e816
+  languageName: node
+  linkType: hard
+
+"@sentry/minimal@npm:6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/minimal@npm:6.9.0"
+  dependencies:
+    "@sentry/hub": 6.9.0
+    "@sentry/types": 6.9.0
+    tslib: ^1.9.3
+  checksum: a8c99ecd68a3c637e29af8bbde3b0b734d59c32898d81ff23b65229092c904e4aea76837e3a105c822fbab9f9a9d50217338075a2b8e7ce1f680a8fa66431bb2
+  languageName: node
+  linkType: hard
+
+"@sentry/node@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/node@npm:6.9.0"
+  dependencies:
+    "@sentry/core": 6.9.0
+    "@sentry/hub": 6.9.0
+    "@sentry/tracing": 6.9.0
+    "@sentry/types": 6.9.0
+    "@sentry/utils": 6.9.0
+    cookie: ^0.4.1
+    https-proxy-agent: ^5.0.0
+    lru_map: ^0.3.3
+    tslib: ^1.9.3
+  checksum: 774da8d9627654bcab071ebd908f5b0d96c7a98217a89129c65b3f1e226ceba9c1b2c3855e64caa7061f9171c105e38636a52f2b5b1e38532d8a37fbf425023a
+  languageName: node
+  linkType: hard
+
+"@sentry/tracing@npm:6.9.0, @sentry/tracing@npm:^6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/tracing@npm:6.9.0"
+  dependencies:
+    "@sentry/hub": 6.9.0
+    "@sentry/minimal": 6.9.0
+    "@sentry/types": 6.9.0
+    "@sentry/utils": 6.9.0
+    tslib: ^1.9.3
+  checksum: 676423995219c9d85bff5de4e29c62892db3484666ed1b6e66ef9c5abbf2a30c77bacbc13c5cb5ae538b7a0f5ab96bb6716a193dce396f45a0c80f0b9769cb85
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/types@npm:6.9.0"
+  checksum: b533e9ee9cc20fdab32fc61cef52abf115f34a34bac7b4612b46a600e1a925c81058029c7f917fefca6e9d4ee971353c300212ff65383e2d77af237583e4d94d
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:6.9.0":
+  version: 6.9.0
+  resolution: "@sentry/utils@npm:6.9.0"
+  dependencies:
+    "@sentry/types": 6.9.0
+    tslib: ^1.9.3
+  checksum: e75ae0deb052c4182bd5e998e7ac8d4570c35790eb9a0cfe63e57774f9070b668bb4b042c12f71eea597ac7f096690ac80046c406577dcf0466f4c8b532ec99d
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^0.14.0":
   version: 0.14.0
   resolution: "@sindresorhus/is@npm:0.14.0"
@@ -1216,6 +1310,13 @@ __metadata:
   version: 0.4.0
   resolution: "cookie@npm:0.4.0"
   checksum: 7aaef4b642c533600fdd001d963a507dfcd814267503374e51d9743475d024feeff8b0b4ddd0777a25791a2efbdfd8bc4a0fe0696104efa195e8f8584807d410
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "cookie@npm:0.4.1"
+  checksum: b8e0928e3e7aba013087974b33a6eec730b0a68b7ec00fc3c089a56ba2883bcf671252fc2ed64775aa1ca64796b6e1f6fdddba25a66808aef77614d235fd3e06
   languageName: node
   linkType: hard
 
@@ -2316,6 +2417,13 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"immediate@npm:~3.0.5":
+  version: 3.0.6
+  resolution: "immediate@npm:3.0.6"
+  checksum: e86d4d20e2da86f9a4629d9aee9d56dfae7d3a7ace7f569b0538f2ec2570d86b3cbdc52c546d23be2cfd28306670f44676fc833cd96d9506659b8c5ab8202ca4
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^3.0.0, import-fresh@npm:^3.2.1":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
@@ -2793,6 +2901,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"lie@npm:3.1.1":
+  version: 3.1.1
+  resolution: "lie@npm:3.1.1"
+  dependencies:
+    immediate: ~3.0.5
+  checksum: 33a07ffeb7eb5aaec59a5f7a72ba7e6a2ce9d011bd7894f36ed11e2da43f076467019e5f9826c5864500c6a792450aa54b263f31cef0a1774553851dce8a501c
+  languageName: node
+  linkType: hard
+
 "load-json-file@npm:^4.0.0":
   version: 4.0.0
   resolution: "load-json-file@npm:4.0.0"
@@ -2802,6 +2919,15 @@ fsevents@~2.3.2:
     pify: ^3.0.0
     strip-bom: ^3.0.0
   checksum: 692f33387be2439e920e394a70754499c22eabe567f55fee7c0a8994c050e27360c1b39c5375d214539ebb7d609d28e69f6bd6e3c070d30bc202c99289e27f96
+  languageName: node
+  linkType: hard
+
+"localforage@npm:^1.8.1":
+  version: 1.9.0
+  resolution: "localforage@npm:1.9.0"
+  dependencies:
+    lie: 3.1.1
+  checksum: 0645f5ec6fe28799081a9a21dc23796fbb665dcc20e09061228302750a05671bd13a42688e41b523f1598fff5d8e219f468d826595b75db07b555d4ff223943e
   languageName: node
   linkType: hard
 
@@ -2918,6 +3044,13 @@ fsevents@~2.3.2:
   dependencies:
     yallist: ^4.0.0
   checksum: b8b78353d2391c0f135cdc245c4744ad41c2efb1a6d98f31bc57a2cf48ebf02de96e4876657c3026673576bf1f1f61fc3fdd77ab00ad1ead737537bf17d8019d
+  languageName: node
+  linkType: hard
+
+"lru_map@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "lru_map@npm:0.3.3"
+  checksum: c1d5347da0658d31f9440496c97e87cc67f201f79e46e9f83dd4cf3766cc93f021c6226f900f096d0e357913cad290c7d464ac632e5e124efbdb2af1da08774c
   languageName: node
   linkType: hard
 
@@ -4038,6 +4171,9 @@ fsevents@~2.3.2:
   version: 0.0.0-use.local
   resolution: "server@workspace:."
   dependencies:
+    "@sentry/integrations": ^6.9.0
+    "@sentry/node": ^6.9.0
+    "@sentry/tracing": ^6.9.0
     "@types/cookie-parser": ^1.4.2
     "@types/cors": ^2.8.12
     "@types/dotenv-safe": ^8
@@ -4058,6 +4194,7 @@ fsevents@~2.3.2:
     jsonwebtoken: ^8.5.1
     mongoose: ^5.13.3
     nodemon: ^2.0.12
+    tslib: ^2.3.0
     typescript: ^4.3.5
     winston: ^3.3.3
   languageName: unknown
@@ -4514,10 +4651,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: f44fe7f216946b17d3e3074df3746372703cf24e9127b4c045511456e8e4bf25515fb0a1bb3937676cc305651c5d4fcb6377b0588a4c6a957e748c4c28905d17
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "tslib@npm:2.3.0"
+  checksum: 7b4fc9feff0f704743c3760f5d8d708f6417fac6458159e63df3a6b1100f0736e3b99edb9fe370f274ad15160a1f49ff05cb49402534c818ff552c48e38c3e6e
   languageName: node
   linkType: hard
 

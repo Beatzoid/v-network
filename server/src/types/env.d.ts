@@ -5,4 +5,8 @@ declare namespace NodeJS {
         ACCESS_TOKEN_SECRET: string;
         REFRESH_TOKEN_SECRET: string;
     }
+
+    interface Global {
+        __rootdir__: string;
+    }
 }

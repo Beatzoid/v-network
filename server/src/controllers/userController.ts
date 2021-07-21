@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 import Users from "../models/userModel";
 
 import { sanitizeInput } from "../utils/sanitizeInput";
+import { handleError } from "../utils/handleError";
 
 const userController = {
     searchUser: async (req: Request, res: Response) => {
@@ -14,8 +15,10 @@ const userController = {
                 .select("fullname username avatar");
             return res.json({ users });
         } catch (err) {
-            return res.status(500).json({ msg: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     getUser: async (req: Request, res: Response) => {
         try {
@@ -25,8 +28,10 @@ const userController = {
             if (!user) return res.status(404).json({ msg: "User not found" });
             return res.json({ user });
         } catch (err) {
-            return res.status(500).json({ msg: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     updateUser: async (req: Request, res: Response) => {
         try {
@@ -45,8 +50,10 @@ const userController = {
 
             return res.json({ msg: "Updated successfully!" });
         } catch (err) {
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     follow: async (req: Request, res: Response) => {
         try {
@@ -75,8 +82,10 @@ const userController = {
 
             return res.json({ msg: "Successfully followed" });
         } catch (err) {
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     },
     unfollow: async (req: Request, res: Response) => {
         try {
@@ -94,8 +103,10 @@ const userController = {
 
             return res.json({ msg: "Successfully unfollowed" });
         } catch (err) {
-            return res.status(500).json({ err: err.message });
+            handleError(err, res);
         }
+
+        return;
     }
 };
 

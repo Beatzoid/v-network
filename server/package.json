@@ -6,13 +6,16 @@
     "scripts": {
         "watch": "tsc -w",
         "dev": "nodemon",
-        "build": "tsc",
+        "build": "tsc -p tsconfig.production.json",
         "start": "node dist/server.js"
     },
     "keywords": [],
     "author": "Beatzoid",
     "license": "MIT",
     "dependencies": {
+        "@sentry/integrations": "^6.9.0",
+        "@sentry/node": "^6.9.0",
+        "@sentry/tracing": "^6.9.0",
         "argon2": "^0.28.2",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
@@ -20,6 +23,7 @@
         "express": "^4.17.1",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.13.3",
+        "tslib": "^2.3.0",
         "winston": "^3.3.3"
     },
     "devDependencies": {

@@ -2,8 +2,10 @@
     "compilerOptions": {
         "target": "ES2021",
         "module": "CommonJS",
+        "allowJs": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
         "lib": ["dom", "es6", "ESNext", "esnext.asynciterable"],
-        "inlineSourceMap": true,
         "outDir": "./dist",
         "moduleResolution": "node",
         "removeComments": true,
