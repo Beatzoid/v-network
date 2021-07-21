@@ -4,10 +4,10 @@
     "description": "Backend",
     "main": "dist/server.js",
     "scripts": {
-        "watch": "tsc -w",
-        "dev": "nodemon",
+        "watch": "NODE_ENV=development tsc -w",
+        "dev": "NODE_ENV=development nodemon",
         "build": "tsc -p tsconfig.production.json",
-        "start": "node dist/server.js"
+        "start": "NODE_ENV=production node dist/server.js"
     },
     "keywords": [],
     "author": "Beatzoid",

@@ -16,7 +16,11 @@ import postRoutes from "./routes/postRouter";
 
 import { sanitizeInputMW } from "./middleware/sanitizeInputMiddleware";
 
-if (process.env.ENABLE_SENTRY === "true") initSentry();
+if (
+    process.env.ENABLE_SENTRY === "true" &&
+    process.env.NODE_ENV !== "development"
+)
+    initSentry();
 
 const app = express();
 app.use(
