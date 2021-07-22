@@ -69,8 +69,6 @@ const Info = () => {
                         </div>
 
                         <div className="mb-2">
-                            <h6>{user.email}</h6>
-
                             <a
                                 href={user.website}
                                 target="_blank"
