@@ -27,7 +27,7 @@ export default DataProvider;
 
 export type RootState = {
     profile: IProfile;
-    status: boolean;
+    status: any;
     homePosts: {
         loading: boolean;
         posts: IPost[];

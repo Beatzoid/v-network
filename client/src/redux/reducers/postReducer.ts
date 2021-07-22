@@ -1,5 +1,6 @@
 import { GLOBALTYPES } from "../types/global";
 import { IPost } from "../types/post";
+import { editData } from "../utils/modifyData";
 
 const initialState: {
     loading: boolean;
@@ -20,15 +21,16 @@ const postReducer = (
             | typeof GLOBALTYPES.STATUS
             | typeof GLOBALTYPES.CREATE_POST
             | typeof GLOBALTYPES.LOADING_POST
-            | typeof GLOBALTYPES.GET_POSTS;
-        payload: { result: number; posts: IPost[] };
+            | typeof GLOBALTYPES.GET_POSTS
+            | typeof GLOBALTYPES.UPDATE_POST;
+        payload: { result: number; posts: IPost[]; _id: string };
     }
 ) => {
     switch (action.type) {
         case GLOBALTYPES.CREATE_POST:
             return {
                 ...state,
-                posts: [...state.posts, action.payload]
+                posts: [action.payload, ...state.posts]
             };
         case GLOBALTYPES.LOADING_POST:
             return {
@@ -40,6 +42,11 @@ const postReducer = (
                 ...state,
                 posts: action.payload.posts,
                 result: action.payload.result
+            };
+        case GLOBALTYPES.UPDATE_POST:
+            return {
+                ...state,
+                posts: editData(state.posts, action.payload._id, action.payload)
             };
         default:
             return state;

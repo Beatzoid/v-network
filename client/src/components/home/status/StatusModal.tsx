@@ -1,11 +1,11 @@
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { createPost } from "../../../redux/actions/postActions";
+import { createPost, updatePost } from "../../../redux/actions/postActions";
 import { GLOBALTYPES, useAppSelector } from "../../../redux/types/global";
 
 const StatusModal = () => {
-    const { auth, theme } = useAppSelector((state) => state);
+    const { auth, theme, status } = useAppSelector((state) => state);
     const dispatch = useDispatch();
 
     const [content, setContent] = useState("");
@@ -85,13 +85,24 @@ const StatusModal = () => {
                 payload: { error: "Please add at least one photo" }
             });
 
-        dispatch(createPost({ content, images, auth }));
+        if (status.onEdit) {
+            dispatch(updatePost({ content, images, auth, status }));
+        } else {
+            dispatch(createPost({ content, images, auth }));
+        }
 
         setContent("");
         setImages([]);
         if (tracks) tracks.stop();
         dispatch({ type: GLOBALTYPES.STATUS, payload: false });
     };
+
+    useEffect(() => {
+        if (status.onEdit) {
+            setContent(status.content);
+            setImages(status.images);
+        }
+    }, [status]);
 
     return (
         <div className="status_modal">
@@ -125,6 +136,8 @@ const StatusModal = () => {
                                     src={
                                         image.camera
                                             ? image.camera
+                                            : image.url
+                                            ? image.url
                                             : URL.createObjectURL(image)
                                     }
                                     alt="images"

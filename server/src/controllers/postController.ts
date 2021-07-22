@@ -28,12 +28,34 @@ const postController = {
         try {
             const posts = await Posts.find({
                 user: [...req.user.following, req.user._id]
-            }).populate("user", "avatar username fullname");
+            })
+                .sort({ createdAt: "desc" })
+                .populate("user", "avatar username fullname");
 
             return res.json({
                 msg: "Successfully got posts",
                 result: posts.length,
                 posts
+            });
+        } catch (err) {
+            handleError(err, res);
+        }
+
+        return;
+    },
+    updatePost: async (req: Request, res: Response) => {
+        try {
+            const { content, images } = req.body;
+
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const post: any = await Posts.findOneAndUpdate(
+                { _id: req.params.id },
+                { content, images }
+            ).populate("user", "avatar username fullname");
+
+            return res.json({
+                msg: "Successfully updated post",
+                newPost: { ...post?._doc, content, images }
             });
         } catch (err) {
             handleError(err, res);

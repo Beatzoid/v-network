@@ -6,7 +6,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { IPost } from "../../../redux/types/post";
 
 import Avatar from "../../header/Avatar";
-import { useAppSelector } from "../../../redux/types/global";
+import { GLOBALTYPES, useAppSelector } from "../../../redux/types/global";
+import { useDispatch } from "react-redux";
 
 interface CardHeaderProps {
     post: IPost;
@@ -16,6 +17,14 @@ const CardHeader = ({ post }: CardHeaderProps) => {
     dayjs.extend(relativeTime);
 
     const { auth } = useAppSelector((state) => state);
+    const dispatch = useDispatch();
+
+    const handleEditPost = () => {
+        dispatch({
+            type: GLOBALTYPES.STATUS,
+            payload: { ...post, onEdit: true }
+        });
+    };
 
     return (
         <div className="card_header">
@@ -50,7 +59,10 @@ const CardHeader = ({ post }: CardHeaderProps) => {
                 <div className="dropdown-menu">
                     {auth.user?._id === post.user._id && (
                         <>
-                            <div className="dropdown-item">
+                            <div
+                                className="dropdown-item"
+                                onClick={handleEditPost}
+                            >
                                 <span className="material-icons">create</span>{" "}
                                 Edit Post
                             </div>

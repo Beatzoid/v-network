@@ -6,7 +6,8 @@ export interface IPostType {
         | typeof GLOBALTYPES.STATUS
         | typeof GLOBALTYPES.CREATE_POST
         | typeof GLOBALTYPES.LOADING_POST
-        | typeof GLOBALTYPES.GET_POSTS;
+        | typeof GLOBALTYPES.GET_POSTS
+        | typeof GLOBALTYPES.UPDATE_POST;
     payload: { posts: IPost[] } | IPost | boolean;
 }
 
