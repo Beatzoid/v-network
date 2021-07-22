@@ -13,5 +13,5 @@ export default combineReducers({
     theme: themeReducer,
     profile: profileReducer,
     status: statusReducer,
-    homePost: postReducer
+    homePosts: postReducer
 });

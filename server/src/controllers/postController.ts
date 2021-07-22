@@ -23,6 +23,24 @@ const postController = {
         }
 
         return;
+    },
+    getPosts: async (req: Request, res: Response) => {
+        try {
+            console.log(req.user);
+            const posts = await Posts.find({
+                user: [...req.user.following, req.user._id]
+            }).populate("user", "avatar username fullname")
+
+            return res.json({
+                msg: "Successfully got posts",
+                result: posts.length,
+                posts
+            });
+        } catch (err) {
+            handleError(err, res);
+        }
+
+        return;
     }
 };
 

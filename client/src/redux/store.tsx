@@ -8,6 +8,7 @@ import rootReducer from "./reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { IProfile } from "./types/profile";
+import { IPost } from "./types/post";
 
 const sentryReduxEnhancer = Sentry.createReduxEnhancer({
     // Optionally pass options listed below
@@ -27,4 +28,10 @@ export default DataProvider;
 export type RootState = {
     profile: IProfile;
     status: boolean;
-} & Omit<ReturnType<typeof store.getState>, "profile" | "status">;
+    homePosts: {
+        loading: boolean;
+        posts: IPost[];
+        result: number;
+        page: number;
+    };
+} & Omit<ReturnType<typeof store.getState>, "profile" | "status" | "homePosts">;

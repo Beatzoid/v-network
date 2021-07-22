@@ -15,6 +15,7 @@ import StatusModal from "./components/home/status/StatusModal";
 
 import { GLOBALTYPES, useAppSelector } from "./redux/types/global";
 import { refreshToken } from "./redux/actions/authActions";
+import { getPosts } from "./redux/actions/postActions";
 
 function App() {
     const { auth, status } = useAppSelector((state) => state);
@@ -22,6 +23,7 @@ function App() {
 
     useEffect(() => {
         dispatch(refreshToken());
+
         const darkMode = JSON.parse(localStorage.getItem("darkmode")!);
         if (darkMode) document.getElementById("theme")?.click();
 
@@ -29,7 +31,9 @@ function App() {
             type: GLOBALTYPES.THEME,
             payload: darkMode
         });
-    }, [dispatch]);
+
+        if (auth.token) dispatch(getPosts(auth.token));
+    }, [dispatch, auth.token]);
 
     return (
         <Router>

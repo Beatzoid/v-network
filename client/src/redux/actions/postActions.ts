@@ -1,12 +1,12 @@
 import { Dispatch } from "redux";
 
-import { postDataAPI } from "../../utils/fetchData";
+import { getDataAPI, postDataAPI } from "../../utils/fetchData";
 import { imageUpload } from "../../utils/imageUpload";
 
 import { IAlertType } from "../types/alert";
 import { IAuth, IAuthType } from "../types/auth";
 import { GLOBALTYPES } from "../types/global";
-import { IPostType } from "../types/post";
+import { IPost, IPostType } from "../types/post";
 
 export const createPost =
     ({
@@ -35,6 +35,22 @@ export const createPost =
             });
 
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } });
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.err }
+            });
+        }
+    };
+
+export const getPosts =
+    (token: string) => async (dispatch: Dispatch<IAlertType | IPostType>) => {
+        try {
+            dispatch({ type: GLOBALTYPES.LOADING_POST, payload: true });
+            const res = await getDataAPI("posts", token);
+            dispatch({ type: GLOBALTYPES.GET_POSTS, payload: res.data });
+
+            dispatch({ type: GLOBALTYPES.LOADING_POST, payload: false });
         } catch (err) {
             dispatch({
                 type: GLOBALTYPES.ALERT,

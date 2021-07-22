@@ -1,9 +1,12 @@
 import { Router } from "express";
 import postController from "../controllers/postController";
-import authMiddleware from "../middleware/authMiddleware";
+import auth from "../middleware/authMiddleware";
 
 const router = Router();
 
-router.route("/posts").post(authMiddleware, postController.createPost);
+router
+    .route("/posts")
+    .post(auth, postController.createPost)
+    .get(auth, postController.getPosts);
 
 export default router;
