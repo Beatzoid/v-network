@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { createPost, updatePost } from "../../../redux/actions/postActions";
 import { GLOBALTYPES, useAppSelector } from "../../../redux/types/global";
@@ -178,16 +179,21 @@ const StatusModal = () => {
 
                     <div className="input_images">
                         {stream ? (
-                            <div onClick={handleCapture}>
-                                <i className="fas fa-camera" />
-                            </div>
+                            <FontAwesomeIcon
+                                onClick={handleCapture}
+                                icon={["fas", "camera"]}
+                            />
                         ) : (
                             <>
-                                <div onClick={handleStream}>
-                                    <i className="fas fa-camera" />
-                                </div>
+                                <FontAwesomeIcon
+                                    onClick={handleStream}
+                                    icon={["fas", "camera"]}
+                                />
                                 <div className="file_upload">
-                                    <i className="fas fa-image" />
+                                    <FontAwesomeIcon
+                                        onClick={handleStream}
+                                        icon={["fas", "image"]}
+                                    />
                                     <input
                                         type="file"
                                         name="file"

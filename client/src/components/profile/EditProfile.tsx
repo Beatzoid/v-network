@@ -8,6 +8,7 @@ import {
 } from "react";
 
 import { useDispatch } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { IUser } from "../../redux/types/auth";
 import { GLOBALTYPES, useAppSelector } from "../../redux/types/global";
@@ -82,7 +83,7 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
                         alt="Avatar"
                     />
                     <span>
-                        <i className="fas fa-camera" />
+                        <FontAwesomeIcon icon={["fas", "camera"]} />
                         <p>Change</p>
                         <input
                             type="file"
