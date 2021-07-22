@@ -62,6 +62,52 @@ const postController = {
         }
 
         return;
+    },
+    likePost: async (req: Request, res: Response) => {
+        try {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            const post = await Posts.find({
+                _id: req.params.id,
+                likes: req.user._id
+            });
+
+            if (post?.length > 0)
+                return res
+                    .status(400)
+                    .json({ err: "You already liked this post" });
+
+            await Posts.findOneAndUpdate(
+                { _id: req.params.id },
+                {
+                    $push: { likes: req.user._id }
+                },
+                { new: true }
+            );
+
+            return res.json({ msg: "Successfully liked" });
+        } catch (err) {
+            handleError(err, res);
+        }
+
+        return;
+    },
+    unlikePost: async (req: Request, res: Response) => {
+        try {
+            await Posts.findOneAndUpdate(
+                { _id: req.params.id },
+                {
+                    $pull: { likes: req.user._id }
+                },
+                { new: true }
+            );
+
+            return res.json({ msg: "Successfully unliked" });
+        } catch (err) {
+            handleError(err, res);
+        }
+
+        return;
     }
 };
 

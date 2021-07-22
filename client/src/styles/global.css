@@ -45,3 +45,9 @@ img {
 @import url("./profile.css");
 @import url("./home.css");
 @import url("./status_modal.css");
+
+.mode {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

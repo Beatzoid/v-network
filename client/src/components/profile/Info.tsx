@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
 import { IUser } from "../../redux/types/auth";
-import { useAppSelector } from "../../redux/types/global";
+import { GLOBALTYPES, useAppSelector } from "../../redux/types/global";
 import { getProfileUsers } from "../../redux/actions/profileActions";
 
 import Avatar from "../header/Avatar";
@@ -31,6 +31,14 @@ const Info = () => {
             setUserData(newData);
         }
     }, [id, auth, dispatch, profile.users]);
+
+    useEffect(() => {
+        if (showFollowers || showFollowing || onEdit) {
+            dispatch({ type: GLOBALTYPES.MODAL, payload: true });
+        } else {
+            dispatch({ type: GLOBALTYPES.MODAL, payload: false });
+        }
+    }, [showFollowers, showFollowing, onEdit, dispatch]);
 
     return (
         <div className="info">

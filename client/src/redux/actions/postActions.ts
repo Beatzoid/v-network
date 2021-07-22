@@ -2,11 +2,12 @@ import { Dispatch } from "redux";
 
 import { getDataAPI, patchDataAPI, postDataAPI } from "../../utils/fetchData";
 import { imageUpload } from "../../utils/imageUpload";
+import { deleteData } from "../utils/modifyData";
 
 import { IAlertType } from "../types/alert";
 import { IAuth, IAuthType } from "../types/auth";
 import { GLOBALTYPES } from "../types/global";
-import { IPostType } from "../types/post";
+import { IPost, IPostType } from "../types/post";
 
 export const createPost =
     ({
@@ -102,6 +103,41 @@ export const updatePost =
                 type: GLOBALTYPES.ALERT,
                 payload: { success: res.data.msg }
             });
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.err }
+            });
+        }
+    };
+
+export const likePost =
+    ({ post, auth }: { post: IPost; auth: IAuth }) =>
+    async (dispatch: Dispatch<IPostType | IAlertType>) => {
+        const newPost = { ...post, likes: [...post.likes, auth.user!] };
+        dispatch({ type: GLOBALTYPES.UPDATE_POST, payload: newPost });
+
+        try {
+            await patchDataAPI(`post/${post._id}/like`, null, auth.token);
+        } catch (err) {
+            dispatch({
+                type: GLOBALTYPES.ALERT,
+                payload: { error: err.response.data.err }
+            });
+        }
+    };
+
+export const unlikePost =
+    ({ post, auth }: { post: IPost; auth: IAuth }) =>
+    async (dispatch: Dispatch<IPostType | IAlertType>) => {
+        const newPost = {
+            ...post,
+            likes: deleteData(post.likes, auth.user?._id!)
+        };
+        dispatch({ type: GLOBALTYPES.UPDATE_POST, payload: newPost });
+
+        try {
+            await patchDataAPI(`post/${post._id}/unlike`, null, auth.token);
         } catch (err) {
             dispatch({
                 type: GLOBALTYPES.ALERT,

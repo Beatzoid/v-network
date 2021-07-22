@@ -11,4 +11,7 @@ router
 
 router.route("/post/:id").patch(auth, postController.updatePost);
 
+router.patch("/post/:id/like", auth, postController.likePost);
+router.patch("/post/:id/unlike", auth, postController.unlikePost);
+
 export default router;

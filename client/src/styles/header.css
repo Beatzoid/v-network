@@ -7,6 +7,7 @@
     z-index: 2;
     box-shadow: 0 0 10px #ddd;
     background: #f8f9fa;
+    border: 1px solid rgb(0, 0, 0, 0.125);
 }
 
 .header .navbar {
@@ -103,6 +104,7 @@
         box-shadow: 0 0 10px #ddd;
         z-index: 2;
         background: #f8f9fa;
+        border: 1px solid rgb(0, 0, 0, 0.125);
     }
 
     .header .menu .navbar-nav {

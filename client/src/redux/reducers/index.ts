@@ -6,6 +6,7 @@ import themeReducer from "./themeReducer";
 import profileReducer from "./profileReducer";
 import statusReducer from "./statusReducer";
 import postReducer from "./postReducer";
+import modalReducer from "./modalReducer";
 
 export default combineReducers({
     auth: authReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
     theme: themeReducer,
     profile: profileReducer,
     status: statusReducer,
-    homePosts: postReducer
+    homePosts: postReducer,
+    modal: modalReducer
 });

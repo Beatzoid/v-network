@@ -71,6 +71,10 @@
     cursor: pointer;
 }
 
+.posts .card_icon_menu .fa-spin {
+    cursor: auto;
+}
+
 .posts .card_icon_menu svg {
     font-size: 28px;
     margin: 10px;

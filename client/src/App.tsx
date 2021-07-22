@@ -18,7 +18,7 @@ import { refreshToken } from "./redux/actions/authActions";
 import { getPosts } from "./redux/actions/postActions";
 
 function App() {
-    const { auth, status } = useAppSelector((state) => state);
+    const { auth, status, modal } = useAppSelector((state) => state);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -40,7 +40,7 @@ function App() {
             <Alert />
 
             <input type="checkbox" id="theme" />
-            <div className="App">
+            <div className={`App ${(status || modal) && "mode"}`}>
                 <div className="main">
                     {auth.token && <Header />}
                     {status && <StatusModal />}
