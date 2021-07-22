@@ -43,8 +43,6 @@ const authController = {
                 gender
             });
 
-            // console.log(newUser);
-
             const accessToken = createAccessToken({ id: newUser._id });
             const refreshToken = createRefreshToken({ id: newUser._id });
 

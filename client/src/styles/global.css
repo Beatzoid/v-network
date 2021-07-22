@@ -18,7 +18,7 @@ code {
     display: none;
 }
 
-#theme:checked ~ .App {
+#theme:checked ~ * {
     filter: invert(1);
 }
 

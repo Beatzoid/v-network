@@ -1,5 +1,5 @@
 import { GLOBALTYPES } from "../types/global";
-import { IPost, IPostType } from "../types/post";
+import { IPost } from "../types/post";
 
 const initialState: {
     loading: boolean;

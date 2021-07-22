@@ -6,7 +6,7 @@ import { imageUpload } from "../../utils/imageUpload";
 import { IAlertType } from "../types/alert";
 import { IAuth, IAuthType } from "../types/auth";
 import { GLOBALTYPES } from "../types/global";
-import { IPost, IPostType } from "../types/post";
+import { IPostType } from "../types/post";
 
 export const createPost =
     ({

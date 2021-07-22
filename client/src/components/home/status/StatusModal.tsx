@@ -18,7 +18,6 @@ const StatusModal = () => {
 
     const handleChangeImages = (e: any) => {
         const files = [...e.target.files!];
-        console.log(files);
         let err = "";
         let newImages: any[] = [];
 

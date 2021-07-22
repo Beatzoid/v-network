@@ -23,10 +23,11 @@ const CardHeader = ({ post }: CardHeaderProps) => {
                 <Avatar src={post.user.avatar} size="big-avatar" />
 
                 <div className="card_name">
-                    <h6>
+                    <h6 className="m-0">
                         <Link
                             to={`/profile/${post.user._id}`}
                             className="text-dark"
+                            style={{ textDecoration: "none" }}
                         >
                             {post.user.username}
                         </Link>
