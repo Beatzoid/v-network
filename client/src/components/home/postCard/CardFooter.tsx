@@ -80,7 +80,9 @@ const CardFooter = ({ post }: CardFooterProps) => {
                         : `${post.likes.length} like`}
                 </h6>
                 <h6 style={{ padding: "0 25px", cursor: "pointer" }}>
-                    {post.comments.length} comments
+                    {post.comments.length > 1 || post.comments.length === 0
+                        ? `${post.comments.length} comments`
+                        : `${post.comments.length} comment`}
                 </h6>
             </div>
         </div>

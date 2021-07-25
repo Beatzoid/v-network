@@ -18,6 +18,7 @@ const Carousel = ({ images, id }: { images: Image[]; id: string }) => {
                 <div className="carousel-indicators">
                     {images.map((_, index) => (
                         <button
+                            key={index}
                             type="button"
                             data-bs-target={`#image${id}`}
                             data-bs-slide-to={index}

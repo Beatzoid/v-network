@@ -16,13 +16,19 @@ export interface Image {
     url: string;
 }
 
+export interface IComment {
+    content: string;
+    createdAt: string;
+    user: IUser;
+    likes: IUser[];
+}
+
 export interface IPost {
     _id: string;
     content: string;
     images: Image[];
     likes: IUser[];
-    // TODO: Replace this with a real type
-    comments: any[];
+    comments: IComment[];
     user: IUser;
     createdAt: string;
 }

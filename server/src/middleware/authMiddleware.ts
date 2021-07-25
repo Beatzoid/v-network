@@ -13,14 +13,18 @@ const authMiddleware = async (
         const token = req.header("Authentication");
 
         if (!token)
-            return res.status(400).json({ msg: "Invalid authentication" });
+            return res
+                .status(400)
+                .json({ msg: "Invalid authentication, please login" });
 
         const decoded = jwt.verify(
             token,
             process.env.ACCESS_TOKEN_SECRET
         ) as JwtPayload;
         if (!decoded)
-            return res.status(400).json({ msg: "Invalid authentication" });
+            return res
+                .status(400)
+                .json({ msg: "Invalid authentication, please login" });
 
         const user = (await Users.findOne({ _id: decoded.id })) as User;
         req.user = user;

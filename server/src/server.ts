@@ -12,7 +12,8 @@ import { initSentry } from "./utils/sentry";
 
 import authRoutes from "./routes/authRoutes";
 import userRoutes from "./routes/userRoutes";
-import postRoutes from "./routes/postRouter";
+import postRoutes from "./routes/postRoutes";
+import commentRoutes from "./routes/commentRoutes";
 
 if (
     process.env.ENABLE_SENTRY === "true" &&
@@ -29,6 +30,7 @@ app.use(cookieParser());
 app.use("/api", postRoutes);
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
+app.use("/api", commentRoutes);
 
 mongoose.connect(
     process.env.MONGODB_URL,

@@ -32,7 +32,7 @@ const CardBody = ({ post }: CardBodyProps) => {
             </div>
 
             {post.images.length > 0 && (
-                <Carousel images={post.images} id={post._id} />
+                <Carousel key={post._id} images={post.images} id={post._id} />
             )}
         </div>
     );

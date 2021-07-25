@@ -1,8 +1,5 @@
 import { useAppSelector } from "../../redux/types/global";
-
-import CardBody from "./postCard/CardBody";
-import CardFooter from "./postCard/CardFooter";
-import CardHeader from "./postCard/CardHeader";
+import PostCard from "../PostCard";
 
 const Posts = () => {
     const { homePosts } = useAppSelector((state) => state);
@@ -10,11 +7,7 @@ const Posts = () => {
     return (
         <div className="posts">
             {homePosts.posts.map((post) => (
-                <div key={post._id} className="card my-3">
-                    <CardHeader post={post} />
-                    <CardBody post={post} />
-                    <CardFooter post={post} />
-                </div>
+                <PostCard key={post._id} post={post} />
             ))}
         </div>
     );
