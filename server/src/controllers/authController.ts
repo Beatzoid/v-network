@@ -48,6 +48,7 @@ const authController = {
 
             res.cookie("refreshtoken", refreshToken, {
                 httpOnly: true,
+                secure: true,
                 path: "/api/refresh_token",
                 maxAge: 30 * 24 * 60 * 60 * 1000 // 30 Days
             });
@@ -93,6 +94,7 @@ const authController = {
 
             res.cookie("refreshtoken", refreshToken, {
                 httpOnly: true,
+                secure: true,
                 path: "/api/refresh_token",
                 maxAge: 30 * 24 * 60 * 60 * 1000 // 30 Days
             });
