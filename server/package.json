@@ -23,7 +23,7 @@
         "express": "^4.17.1",
         "helmet": "^4.6.0",
         "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.13.3",
+        "mongoose": "^5.13.4",
         "tslib": "^2.3.0",
         "winston": "^3.3.3"
     },
