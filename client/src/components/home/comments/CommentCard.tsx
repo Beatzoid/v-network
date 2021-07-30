@@ -23,6 +23,7 @@ const CommentCard = ({ comment, post }: CommentCardProps) => {
 
     const { auth } = useAppSelector((state) => state);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [isLiked, setIsLiked] = useState(false);
 
     useEffect(() => {
