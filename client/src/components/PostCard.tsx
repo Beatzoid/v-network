@@ -1,6 +1,6 @@
 import { IPost } from "../redux/types/post";
-import Comments from "./home/comment/Comments";
-import InputComment from "./home/comment/InputComment";
+import Comments from "./home/comments/Comments";
+import InputComment from "./home/comments/InputComment";
 
 import CardBody from "./home/postCard/CardBody";
 import CardFooter from "./home/postCard/CardFooter";

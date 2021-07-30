@@ -18,3 +18,42 @@
     color: blue;
     font-weight: 600;
 }
+
+.comment_display {
+    padding: 10px 25px;
+}
+
+.comment_card .comment_content {
+    background: #eee;
+    padding: 7px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment_card .comment_content .readMore {
+    cursor: pointer;
+    color: crimson;
+}
+
+.comment_card .comment_content .nav-item {
+    cursor: pointer;
+    opacity: 0;
+}
+
+.comment_card .comment_content:hover .nav-item {
+    opacity: 1;
+}
+
+.comment_card .comment_content .dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: inherit;
+}
+
+.comment_card .comment_content .dropdown-item {
+    display: flex;
+    margin: 10px 0;
+}

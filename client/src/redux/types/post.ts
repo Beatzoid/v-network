@@ -17,6 +17,7 @@ export interface Image {
 }
 
 export interface IComment {
+    _id?: string;
     content: string;
     createdAt: string;
     user: IUser;

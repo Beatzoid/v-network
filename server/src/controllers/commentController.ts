@@ -9,7 +9,6 @@ const commentController = {
     createComment: async (req: Request, res: Response) => {
         try {
             const { postId, content, tag, reply } = req.body;
-            console.log(req.body);
 
             const newComment = new Comments({
                 user: req.user._id,
@@ -18,12 +17,11 @@ const commentController = {
                 reply
             });
 
-            const newPost = await Posts.findOneAndUpdate(
+            await Posts.findOneAndUpdate(
                 { _id: postId },
                 { $push: { comments: newComment._id } },
                 { new: true }
             );
-            console.log(newPost);
 
             await newComment.save();
 

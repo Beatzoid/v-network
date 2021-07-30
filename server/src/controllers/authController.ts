@@ -18,11 +18,11 @@ const authController = {
                 username: newUsername
             });
             if (existingUsername)
-                return res.status(400).json({ msg: "Username already in use" });
+                return res.status(400).json({ err: "Username already in use" });
 
             const existingEmail = await Users.findOne({ email });
             if (existingEmail)
-                return res.status(400).json({ msg: "Email already in use" });
+                return res.status(400).json({ err: "Email already in use" });
 
             if (password.length < 6)
                 return res.status(400).json({
@@ -79,7 +79,7 @@ const authController = {
             );
 
             if (!user)
-                return res.status(400).json({ msg: "Email does not exist" });
+                return res.status(400).json({ err: "Email does not exist" });
 
             const correctPassword = await argon2.verify(
                 user.password,
@@ -87,7 +87,7 @@ const authController = {
             );
 
             if (!correctPassword)
-                return res.status(400).json({ msg: "Incorrect password" });
+                return res.status(400).json({ err: "Incorrect password" });
 
             const accessToken = createAccessToken({ id: user._id });
             const refreshToken = createRefreshToken({ id: user._id });
