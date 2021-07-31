@@ -22,6 +22,7 @@ export interface IComment {
     createdAt: string;
     user: IUser;
     likes: IUser[];
+    reply?: IComment[];
 }
 
 export interface IPost {

@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from "react";
 import { IAuth } from "../../../redux/types/auth";
 import { IComment, IPost } from "../../../redux/types/post";
 
@@ -5,13 +6,14 @@ interface CommentMenuProps {
     post: IPost;
     comment: IComment;
     auth: IAuth;
+    setOnEdit: Dispatch<SetStateAction<boolean>>;
 }
 
-const CommentMenu = ({ post, comment, auth }: CommentMenuProps) => {
+const CommentMenu = ({ post, comment, auth, setOnEdit }: CommentMenuProps) => {
     const MenuItem = () => {
         return (
             <>
-                <div className="dropdown-item">
+                <div className="dropdown-item" onClick={() => setOnEdit(true)}>
                     <span className="material-icons">create</span> Edit
                 </div>
                 <div className="dropdown-item">

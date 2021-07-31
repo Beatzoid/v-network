@@ -5,14 +5,22 @@ interface LikeButtonProps {
     isLiked: boolean;
     handleLike: () => void;
     handleUnlike: () => void;
+    loading?: boolean;
 }
 
-const LikeButton = ({ isLiked, handleLike, handleUnlike }: LikeButtonProps) => {
+const LikeButton = ({
+    isLiked,
+    handleLike,
+    handleUnlike,
+    loading
+}: LikeButtonProps) => {
     const { theme } = useAppSelector((state) => state);
 
     return (
         <>
-            {isLiked ? (
+            {loading ? (
+                <FontAwesomeIcon icon={["fas", "sync"]} className="fa-spin" />
+            ) : isLiked ? (
                 <FontAwesomeIcon
                     onClick={handleUnlike}
                     className="text-danger"

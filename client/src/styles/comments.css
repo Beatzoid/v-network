@@ -43,7 +43,8 @@
     opacity: 0;
 }
 
-.comment_card .comment_content:hover .nav-item {
+.comment_card .comment_content:hover .nav-item,
+.comment_content:active .nav-item {
     opacity: 1;
 }
 
@@ -56,4 +57,11 @@
 .comment_card .comment_content .dropdown-item {
     display: flex;
     margin: 10px 0;
+}
+
+.comment_card .comment_content textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
 }

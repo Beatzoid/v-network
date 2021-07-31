@@ -29,12 +29,12 @@ const postController = {
             const posts = await Posts.find({
                 user: [...req.user.following, req.user._id]
             })
-                .sort({ createdAt: "desc" })
                 .populate("user likes", "avatar username fullname")
                 .populate({
                     path: "comments",
                     populate: { path: "user likes", select: "-password" }
-                });
+                })
+                .sort({ createdAt: "desc" });
 
             return res.json({
                 msg: "Successfully got posts",
