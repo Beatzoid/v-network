@@ -3258,9 +3258,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb@npm:3.6.10":
-  version: 3.6.10
-  resolution: "mongodb@npm:3.6.10"
+"mongodb@npm:3.6.11":
+  version: 3.6.11
+  resolution: "mongodb@npm:3.6.11"
   dependencies:
     bl: ^2.2.1
     bson: ^1.1.4
@@ -3284,7 +3284,7 @@ fsevents@~2.3.2:
       optional: true
     snappy:
       optional: true
-  checksum: 259930dd39103e2d325124c4d2f02f53bf7c191c95925513e6b26857d6ad48afece4f021615e0e04afb4d7096c1bb6a7836c0c0c17ee1b482d4f59701527288a
+  checksum: 2d13e576f37657a8f48bd527d99da3478648aa4ae26210a4331d45bff551de8a3d5342dcfb762bd9bda9a904efca169abda6d3c91d60d6baa6118f7452ffda90
   languageName: node
   linkType: hard
 
@@ -3297,14 +3297,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.13.5, mongoose@npm:^5.13.5":
-  version: 5.13.5
-  resolution: "mongoose@npm:5.13.5"
+"mongoose@npm:5.13.6, mongoose@npm:^5.13.6":
+  version: 5.13.6
+  resolution: "mongoose@npm:5.13.6"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
     kareem: 2.3.2
-    mongodb: 3.6.10
+    mongodb: 3.6.11
     mongoose-legacy-pluralize: 1.0.2
     mpath: 0.8.3
     mquery: 3.2.5
@@ -3314,7 +3314,7 @@ fsevents@~2.3.2:
     safe-buffer: 5.2.1
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: 8c8b08da0e089f959131eea708232c30ce3164292646686db2a0c7496c669d5e5151342a76b070b47ff2e9b7cccd5b7edfcc0d171c0b2d7729f7bdfdf8567377
+  checksum: be2f181812801e8d6568a49016933c0b739e95c1abc293b46d9538dabfbd5dba6ea85d411300660f9990ecf66bbbcae52ceb9301d5644a78bc46e9f9f77474dd
   languageName: node
   linkType: hard
 
@@ -4193,7 +4193,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.13.5
+    mongoose: ^5.13.6
     nodemon: ^2.0.12
     tslib: ^2.3.0
     typescript: ^4.3.5
