@@ -3297,9 +3297,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:5.13.6, mongoose@npm:^5.13.6":
-  version: 5.13.6
-  resolution: "mongoose@npm:5.13.6"
+"mongoose@npm:5.13.7, mongoose@npm:^5.13.7":
+  version: 5.13.7
+  resolution: "mongoose@npm:5.13.7"
   dependencies:
     "@types/mongodb": ^3.5.27
     bson: ^1.1.4
@@ -3314,7 +3314,7 @@ fsevents@~2.3.2:
     safe-buffer: 5.2.1
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: be2f181812801e8d6568a49016933c0b739e95c1abc293b46d9538dabfbd5dba6ea85d411300660f9990ecf66bbbcae52ceb9301d5644a78bc46e9f9f77474dd
+  checksum: 9fcc6c478928ec151ca0c627bcb145f82e58d764caef1af2235bd9ac75488881ec345ac6f421f8bb45a057a928e9839f0cc38cde63094b1d57740dbdeba39076
   languageName: node
   linkType: hard
 
@@ -4193,7 +4193,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^5.13.6
+    mongoose: ^5.13.7
     nodemon: ^2.0.12
     tslib: ^2.3.0
     typescript: ^4.3.5
