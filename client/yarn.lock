@@ -1535,6 +1535,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.12.13":
+  version: 7.15.3
+  resolution: "@babel/runtime@npm:7.15.3"
+  dependencies:
+    regenerator-runtime: ^0.13.4
+  checksum: dfb5ba324d36b141f3ed5a6af8a4c03b6b5c94cc2453b265dbdd56ae3b5c28c1a44640b31fa9d7462d8278c7c8af967be8004024a87c795175c724cd77c5cce1
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.10.4, @babel/template@npm:^7.12.13, @babel/template@npm:^7.3.3":
   version: 7.12.13
   resolution: "@babel/template@npm:7.12.13"
@@ -4551,7 +4560,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-redux: ^7.2.4
-    react-router-dom: ^5.2.0
+    react-router-dom: ^5.2.1
     react-scripts: 4.0.3
     redux: ^4.1.1
     redux-devtools-extension: ^2.13.9
@@ -12308,28 +12317,28 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^5.2.0":
-  version: 5.2.0
-  resolution: "react-router-dom@npm:5.2.0"
+"react-router-dom@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "react-router-dom@npm:5.2.1"
   dependencies:
-    "@babel/runtime": ^7.1.2
+    "@babel/runtime": ^7.12.13
     history: ^4.9.0
     loose-envify: ^1.3.1
     prop-types: ^15.6.2
-    react-router: 5.2.0
+    react-router: 5.2.1
     tiny-invariant: ^1.0.2
     tiny-warning: ^1.0.0
   peerDependencies:
     react: ">=15"
-  checksum: 9ad2d72630491f324a0f0c1dbcc3dc04d8d7cee7cb9dc9effd115fe736ba06104360a78a624170f863738d77e487d459864206a79d91d3c9663cf1dadb3b637f
+  checksum: a9664a1ef7b795df30eb00e5e4efd64920678ce620548e3f3e4a1fa23ef0a188bfbbff3e9af6402eb822629b2586e15d5bd62269b8b7d5e3705a46815cd9d045
   languageName: node
   linkType: hard
 
-"react-router@npm:5.2.0":
-  version: 5.2.0
-  resolution: "react-router@npm:5.2.0"
+"react-router@npm:5.2.1":
+  version: 5.2.1
+  resolution: "react-router@npm:5.2.1"
   dependencies:
-    "@babel/runtime": ^7.1.2
+    "@babel/runtime": ^7.12.13
     history: ^4.9.0
     hoist-non-react-statics: ^3.1.0
     loose-envify: ^1.3.1
@@ -12341,7 +12350,7 @@ fsevents@^1.2.7:
     tiny-warning: ^1.0.0
   peerDependencies:
     react: ">=15"
-  checksum: 4437eaa9bab02d46a7d6ea4915731c1f31642d6c3e3f7b9f951f5c6a9a73f35d4deb43a2d6b4be85f27816a20de96c3b9a9239f4b7e9136742106794ad20e95c
+  checksum: fd2fb21a46caabd4cc8ebaeb54c1e74733658e90eee50fd585c52e37110576ac479072d919b8a422586c361f7939c2d43dbf6d072700f6c8342808839948088a
   languageName: node
   linkType: hard
 
