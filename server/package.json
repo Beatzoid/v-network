@@ -13,9 +13,9 @@
     "author": "Beatzoid",
     "license": "MIT",
     "dependencies": {
-        "@sentry/integrations": "^6.11.0",
-        "@sentry/node": "^6.11.0",
-        "@sentry/tracing": "^6.11.0",
+        "@sentry/integrations": "^6.12.0",
+        "@sentry/node": "^6.12.0",
+        "@sentry/tracing": "^6.12.0",
         "argon2": "^0.28.2",
         "cookie-parser": "^1.4.5",
         "cors": "^2.8.5",
