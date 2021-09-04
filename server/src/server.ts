@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 global.__rootdir__ = __dirname || process.cwd();
 
 import "dotenv-safe/config";
@@ -34,19 +36,10 @@ app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", commentRoutes);
 
-mongoose.connect(
-    process.env.MONGODB_URL,
-    {
-        useCreateIndex: true,
-        useFindAndModify: false,
-        useUnifiedTopology: true,
-        useNewUrlParser: true
-    },
-    (err) => {
-        if (err) throw err;
-        logger.info("Successfully connected to MongoDB!");
-    }
-);
+mongoose.connect(process.env.MONGODB_URL, (err) => {
+    if (err) throw err;
+    logger.info("Successfully connected to MongoDB!");
+});
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () =>

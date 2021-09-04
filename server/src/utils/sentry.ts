@@ -7,6 +7,8 @@ export const initSentry = () => {
         tracesSampleRate: 1.0,
         integrations: [
             new RewriteFrames({
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 root: global.__rootdir__
             })
         ],
