@@ -21,7 +21,7 @@ export const createComment =
             const newData = { ...res.data.newComment, user: auth.user! };
             const newPost = { ...post, comments: [...post.comments, newData] };
             dispatch({ type: GLOBALTYPES.UPDATE_POST, payload: newPost });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -45,7 +45,7 @@ export const updateComment =
                 { content },
                 auth.token
             );
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -67,7 +67,7 @@ export const likeComment =
 
         try {
             await patchDataAPI(`comment/${comment._id}/like`, null, auth.token);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -93,7 +93,7 @@ export const unlikeComment =
                 null,
                 auth.token
             );
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }

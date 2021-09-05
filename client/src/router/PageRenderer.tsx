@@ -9,7 +9,7 @@ const generatePage = (pageName: string) => {
 
     try {
         return createElement(component());
-    } catch (err) {
+    } catch (err: any) {
         return <NotFound />;
     }
 };

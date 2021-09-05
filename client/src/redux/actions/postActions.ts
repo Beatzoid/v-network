@@ -36,7 +36,7 @@ export const createPost =
             });
 
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -52,7 +52,7 @@ export const getPosts =
             dispatch({ type: GLOBALTYPES.GET_POSTS, payload: res.data });
 
             dispatch({ type: GLOBALTYPES.LOADING_POST, payload: false });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -103,7 +103,7 @@ export const updatePost =
                 type: GLOBALTYPES.ALERT,
                 payload: { success: res.data.msg }
             });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -119,7 +119,7 @@ export const likePost =
 
         try {
             await patchDataAPI(`post/${post._id}/like`, null, auth.token);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -138,7 +138,7 @@ export const unlikePost =
 
         try {
             await patchDataAPI(`post/${post._id}/unlike`, null, auth.token);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }

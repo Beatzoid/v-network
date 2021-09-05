@@ -33,7 +33,7 @@ const Search = () => {
             );
             setUsers(res.data.users);
             setLoad(false);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }

@@ -20,7 +20,7 @@ export const getProfileUsers =
 
                 dispatch({ type: GLOBALTYPES.GET_USER, payload: res.data });
                 dispatch({ type: GLOBALTYPES.LOADING, payload: false });
-            } catch (err) {
+            } catch (err: any) {
                 dispatch({
                     type: GLOBALTYPES.ALERT,
                     payload: { error: err.response.data.err }
@@ -87,7 +87,7 @@ export const updateUserProfile =
             });
 
             dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -127,7 +127,7 @@ export const follow =
 
         try {
             await patchDataAPI(`user/${user._id}/follow`, null, auth.token);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -170,7 +170,7 @@ export const unfollow =
 
         try {
             await patchDataAPI(`user/${user._id}/unfollow`, null, auth.token);
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }

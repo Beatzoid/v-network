@@ -23,7 +23,7 @@ export const login =
                 type: GLOBALTYPES.ALERT,
                 payload: { success: res.data.message }
             });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -48,7 +48,7 @@ export const refreshToken =
                 });
 
                 dispatch({ type: GLOBALTYPES.ALERT, payload: {} });
-            } catch (err) {
+            } catch (err: any) {
                 dispatch({
                     type: GLOBALTYPES.ALERT,
                     payload: { error: err.response.data.err }
@@ -81,7 +81,7 @@ export const register =
                 type: GLOBALTYPES.ALERT,
                 payload: { success: res.data.message }
             });
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
@@ -95,7 +95,7 @@ export const logout =
             localStorage.removeItem("firstLogin");
             await postDataAPI("logout");
             window.location.href = "/";
-        } catch (err) {
+        } catch (err: any) {
             dispatch({
                 type: GLOBALTYPES.ALERT,
                 payload: { error: err.response.data.err }
