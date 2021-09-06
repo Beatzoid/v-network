@@ -3297,9 +3297,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "mongoose@npm:6.0.4"
+"mongoose@npm:^6.0.5":
+  version: 6.0.5
+  resolution: "mongoose@npm:6.0.5"
   dependencies:
     bson: ^4.2.2
     kareem: 2.3.2
@@ -3310,7 +3310,7 @@ fsevents@~2.3.2:
     regexp-clone: 1.0.0
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: cfe9506910f2224675262593a05265c4936fe792333ece641d1306314e8ad53cfc51230ac922e6935c9c465bd9486b8b79f5d6efb7d58557bc6ebf5b1985c30e
+  checksum: 6dad6f2c83c9b3fb2126be7cee5dc7d190bc051e989f282d28e201b51a9fc9009ce0ebfed172328a673b3d821843c66acd0f9a608434dcc00b1a35ee6fa4f8cd
   languageName: node
   linkType: hard
 
@@ -4180,7 +4180,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^6.0.4
+    mongoose: ^6.0.5
     nodemon: ^2.0.12
     tslib: ^2.3.1
     typescript: ^4.4.2
