@@ -1612,9 +1612,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@craco/craco@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "@craco/craco@npm:6.2.0"
+"@craco/craco@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@craco/craco@npm:6.3.0"
   dependencies:
     cross-spawn: ^7.0.0
     lodash: ^4.17.15
@@ -1624,7 +1624,7 @@ __metadata:
     react-scripts: ^4.0.0
   bin:
     craco: bin/craco.js
-  checksum: 51fb534a3e1a3cefdf2722201d532457c47a58a93e19115ad9ae6ea731ee4cd468e4a63959e5f793cc320b87557b2ef5ead76b4af0df955075a8d37aae2bc26d
+  checksum: 0cc2de18e8bd9f0b79134850691cdc93037ea0aa4ec9d087ccf29e5146e3cba95256535653cdb32103cbd24d86ad2f75932f32d852445631404f5e0989c1cd2e
   languageName: node
   linkType: hard
 
@@ -4543,7 +4543,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "client@workspace:."
   dependencies:
-    "@craco/craco": ^6.2.0
+    "@craco/craco": ^6.3.0
     "@fortawesome/fontawesome-svg-core": ^1.2.36
     "@fortawesome/free-regular-svg-icons": ^5.15.4
     "@fortawesome/free-solid-svg-icons": ^5.15.4
