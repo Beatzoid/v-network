@@ -3331,9 +3331,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb@npm:4.1.2":
-  version: 4.1.2
-  resolution: "mongodb@npm:4.1.2"
+"mongodb@npm:4.1.3":
+  version: 4.1.3
+  resolution: "mongodb@npm:4.1.3"
   dependencies:
     bson: ^4.5.2
     denque: ^2.0.1
@@ -3342,24 +3342,24 @@ fsevents@~2.3.2:
   dependenciesMeta:
     saslprep:
       optional: true
-  checksum: ea1e4ceebc594eaee0d4dcac5f293491752b1607c427e173f9f13a439823a6135b82fcdbe509f3d3bf78ef22f831ce71d5acdef0cbeb654c9b861f690ee48b83
+  checksum: 528fa310d3209ca35f94f081af6e1b3e4bd8582e761dfd140c4f0599e2d4d7632688b6e145b014e36bc9a11fb6ff605d936c886530858a40c32230499d4ec374
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.11":
-  version: 6.0.11
-  resolution: "mongoose@npm:6.0.11"
+"mongoose@npm:^6.0.12":
+  version: 6.0.12
+  resolution: "mongoose@npm:6.0.12"
   dependencies:
     bson: ^4.2.2
     kareem: 2.3.2
-    mongodb: 4.1.2
+    mongodb: 4.1.3
     mpath: 0.8.4
     mquery: 4.0.0
     ms: 2.1.2
     regexp-clone: 1.0.0
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: 55e432b36780a1538c0376c56a370c30d0daa5d5957af3aa9b25a1379abf1401672ff58690ba8d5d8852417ec3215f48668eda0bbc0ee0ba2d99cbe6b605b36f
+  checksum: 1eb8619b7626da4a0777b6039673274baaa47eece7a84c6335ae4adb50c0b5062e04b9e2cf2bed336d1a0f72251f2955a87d568cf92f070574a33ea3b8948cb9
   languageName: node
   linkType: hard
 
@@ -4161,7 +4161,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^6.0.11
+    mongoose: ^6.0.12
     nodemon: ^2.0.14
     tslib: ^2.3.1
     typescript: ^4.4.4
