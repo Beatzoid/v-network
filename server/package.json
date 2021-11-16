@@ -17,7 +17,7 @@
         "@sentry/node": "^6.15.0",
         "@sentry/tracing": "^6.15.0",
         "argon2": "^0.28.2",
-        "cookie-parser": "^1.4.5",
+        "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "dotenv-safe": "^8.2.0",
         "express": "^4.17.1",
