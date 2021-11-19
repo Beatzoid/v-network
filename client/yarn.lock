@@ -1621,9 +1621,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@craco/craco@npm:^6.4.0":
-  version: 6.4.0
-  resolution: "@craco/craco@npm:6.4.0"
+"@craco/craco@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@craco/craco@npm:6.4.1"
   dependencies:
     "@endemolshinegroup/cosmiconfig-typescript-loader": ^3.0.2
     cosmiconfig: ^7.0.1
@@ -1635,7 +1635,7 @@ __metadata:
     react-scripts: ^4.0.0
   bin:
     craco: bin/craco.js
-  checksum: 596d7169cc7398187c387b4f23817ae30cc402392169ca330da9976a1ae3497265a068f92fc2cefddb9dd3007bca755582989a421b292a5e4d217cf5c8ffb8e6
+  checksum: a16961123b38b193182c2ec00d44f575d972df1eafc7355f592cbc0471700a5a64ab86a084b05340ad773dfd5897e79b8f4b7db3573c196503428c27c48376d9
   languageName: node
   linkType: hard
 
@@ -4563,7 +4563,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "client@workspace:."
   dependencies:
-    "@craco/craco": ^6.4.0
+    "@craco/craco": ^6.4.1
     "@fortawesome/fontawesome-svg-core": ^1.2.36
     "@fortawesome/free-regular-svg-icons": ^5.15.4
     "@fortawesome/free-solid-svg-icons": ^5.15.4
