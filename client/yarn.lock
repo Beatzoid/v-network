@@ -1621,11 +1621,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@craco/craco@npm:^6.4.1":
-  version: 6.4.1
-  resolution: "@craco/craco@npm:6.4.1"
+"@craco/craco@npm:^6.4.2":
+  version: 6.4.2
+  resolution: "@craco/craco@npm:6.4.2"
   dependencies:
-    "@endemolshinegroup/cosmiconfig-typescript-loader": ^3.0.2
     cosmiconfig: ^7.0.1
     cross-spawn: ^7.0.0
     lodash: ^4.17.15
@@ -1635,7 +1634,7 @@ __metadata:
     react-scripts: ^4.0.0
   bin:
     craco: bin/craco.js
-  checksum: a16961123b38b193182c2ec00d44f575d972df1eafc7355f592cbc0471700a5a64ab86a084b05340ad773dfd5897e79b8f4b7db3573c196503428c27c48376d9
+  checksum: 376369ca9f42f19143facc3ed2187807169baf74cedb8587daac0749d2fcc03633940c1d7c20aa38a2329cfa60499c61812124b829820b609c2daa089f5697ac
   languageName: node
   linkType: hard
 
@@ -1650,20 +1649,6 @@ __metadata:
   version: 10.1.0
   resolution: "@csstools/normalize.css@npm:10.1.0"
   checksum: c0adedd58e16b73b6588377ca505bfbc3f6273ab1ba1b55dd343aa5e4c0bf81bd74f051a1317a0d383bdcd59af665ba34db00b0c51c7dbc176c1a536175c2b03
-  languageName: node
-  linkType: hard
-
-"@endemolshinegroup/cosmiconfig-typescript-loader@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "@endemolshinegroup/cosmiconfig-typescript-loader@npm:3.0.2"
-  dependencies:
-    lodash.get: ^4
-    make-error: ^1
-    ts-node: ^9
-    tslib: ^2
-  peerDependencies:
-    cosmiconfig: ">=6"
-  checksum: 7fe0198622b1063c40572034df7e8ba867865a1b4815afe230795929abcf785758b34d7806a8e2100ba8ab4e92c5a1c3e11a980c466c4406df6e7ec6e50df8b6
   languageName: node
   linkType: hard
 
@@ -3345,13 +3330,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"arg@npm:^4.1.0":
-  version: 4.1.3
-  resolution: "arg@npm:4.1.3"
-  checksum: 544af8dd3f60546d3e4aff084d451b96961d2267d668670199692f8d054f0415d86fc5497d0e641e91546f0aa920e7c29e5250e99fc89f5552a34b5d93b77f43
-  languageName: node
-  linkType: hard
-
 "argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -4563,7 +4541,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "client@workspace:."
   dependencies:
-    "@craco/craco": ^6.4.1
+    "@craco/craco": ^6.4.2
     "@fortawesome/fontawesome-svg-core": ^1.2.36
     "@fortawesome/free-regular-svg-icons": ^5.15.4
     "@fortawesome/free-solid-svg-icons": ^5.15.4
@@ -5041,13 +5019,6 @@ __metadata:
     safe-buffer: ^5.0.1
     sha.js: ^2.4.8
   checksum: ba12bb2257b585a0396108c72830e85f882ab659c3320c83584b1037f8ab72415095167ced80dc4ce8e446a8ecc4b2acf36d87befe0707d73b26cf9dc77440ed
-  languageName: node
-  linkType: hard
-
-"create-require@npm:^1.1.0":
-  version: 1.1.1
-  resolution: "create-require@npm:1.1.1"
-  checksum: a9a1503d4390d8b59ad86f4607de7870b39cad43d929813599a23714831e81c520bddf61bcdd1f8e30f05fd3a2b71ae8538e946eb2786dc65c2bbc520f692eff
   languageName: node
   linkType: hard
 
@@ -5656,13 +5627,6 @@ __metadata:
   version: 26.6.2
   resolution: "diff-sequences@npm:26.6.2"
   checksum: 79af871776ef149a7ff3345d6b1bf37fe6e81f68632aa5542787851f6f60fba19b0be22fdd1e06046f56ae7382763ccfe94a982c39ee72bd107aef435ecbc0cf
-  languageName: node
-  linkType: hard
-
-"diff@npm:^4.0.1":
-  version: 4.0.2
-  resolution: "diff@npm:4.0.2"
-  checksum: f2c09b0ce4e6b301c221addd83bf3f454c0bc00caa3dd837cf6c127d6edf7223aa2bbe3b688feea110b7f262adbfc845b757c44c8a9f8c0c5b15d8fa9ce9d20d
   languageName: node
   linkType: hard
 
@@ -9541,13 +9505,6 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"lodash.get@npm:^4":
-  version: 4.4.2
-  resolution: "lodash.get@npm:4.4.2"
-  checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
-  languageName: node
-  linkType: hard
-
 "lodash.memoize@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
@@ -9665,13 +9622,6 @@ fsevents@^1.2.7:
   dependencies:
     semver: ^6.0.0
   checksum: 484200020ab5a1fdf12f393fe5f385fc8e4378824c940fba1729dcd198ae4ff24867bc7a5646331e50cead8abff5d9270c456314386e629acec6dff4b8016b78
-  languageName: node
-  linkType: hard
-
-"make-error@npm:^1, make-error@npm:^1.1.1":
-  version: 1.3.6
-  resolution: "make-error@npm:1.3.6"
-  checksum: b86e5e0e25f7f777b77fabd8e2cbf15737972869d852a22b7e73c17623928fccb826d8e46b9951501d3f20e51ad74ba8c59ed584f610526a48f8ccf88aaec402
   languageName: node
   linkType: hard
 
@@ -13689,16 +13639,6 @@ resolve@1.18.1:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.17":
-  version: 0.5.20
-  resolution: "source-map-support@npm:0.5.20"
-  dependencies:
-    buffer-from: ^1.0.0
-    source-map: ^0.6.0
-  checksum: 43946aff452011960d16154304b11011e0185549493e65dd90da045959409fb2d266ba1c854fff3d5949f8e59382e3fcc7f7c5fa66136007a6750ad06c6c0baa
-  languageName: node
-  linkType: hard
-
 "source-map-support@npm:^0.5.6, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.19":
   version: 0.5.19
   resolution: "source-map-support@npm:0.5.19"
@@ -14558,27 +14498,6 @@ resolve@1.18.1:
   languageName: node
   linkType: hard
 
-"ts-node@npm:^9":
-  version: 9.1.1
-  resolution: "ts-node@npm:9.1.1"
-  dependencies:
-    arg: ^4.1.0
-    create-require: ^1.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    source-map-support: ^0.5.17
-    yn: 3.1.1
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 356e2647b8b1e6ab00380c0537fa569b63bd9b6f006cc40fd650f81fae1817bd8fecc075300036950d8f45c1d85b95be33cd1e48a1a424a7d86c3dbb42bf60e5
-  languageName: node
-  linkType: hard
-
 "ts-pnp@npm:1.2.0, ts-pnp@npm:^1.1.6":
   version: 1.2.0
   resolution: "ts-pnp@npm:1.2.0"
@@ -14605,13 +14524,6 @@ resolve@1.18.1:
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
   languageName: node
   linkType: hard
 
@@ -15801,13 +15713,6 @@ typescript@^4.4.4:
     y18n: ^4.0.0
     yargs-parser: ^18.1.2
   checksum: 40b974f508d8aed28598087720e086ecd32a5fd3e945e95ea4457da04ee9bdb8bdd17fd91acff36dc5b7f0595a735929c514c40c402416bbb87c03f6fb782373
-  languageName: node
-  linkType: hard
-
-"yn@npm:3.1.1":
-  version: 3.1.1
-  resolution: "yn@npm:3.1.1"
-  checksum: 2c487b0e149e746ef48cda9f8bad10fc83693cd69d7f9dcd8be4214e985de33a29c9e24f3c0d6bcf2288427040a8947406ab27f7af67ee9456e6b84854f02dd6
   languageName: node
   linkType: hard
 
