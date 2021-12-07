@@ -1019,12 +1019,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^4.5.4":
-  version: 4.5.4
-  resolution: "bson@npm:4.5.4"
+"bson@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "bson@npm:4.6.0"
   dependencies:
     buffer: ^5.6.0
-  checksum: f4d088a91ef9872c98cc2434e13bc7304a5fb893b43b259b63d3f92b1adeeafb9f263b3cc9ad44224b929383a7b8edd4798984f6da93dfa3d655c7e57f601d57
+  checksum: d38ca1b6c581d8667137c62258f22c0076575879c77f278c08282721844166afc0538d9fb4942976bb320a2e3dec3ddfae57b7ad52845bf7464bf997d3fdc5a2
   languageName: node
   linkType: hard
 
@@ -3364,7 +3364,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb-connection-string-url@npm:^2.1.0":
+"mongodb-connection-string-url@npm:^2.2.0":
   version: 2.2.0
   resolution: "mongodb-connection-string-url@npm:2.2.0"
   dependencies:
@@ -3374,35 +3374,35 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb@npm:4.1.4":
-  version: 4.1.4
-  resolution: "mongodb@npm:4.1.4"
+"mongodb@npm:4.2.1":
+  version: 4.2.1
+  resolution: "mongodb@npm:4.2.1"
   dependencies:
-    bson: ^4.5.4
+    bson: ^4.6.0
     denque: ^2.0.1
-    mongodb-connection-string-url: ^2.1.0
+    mongodb-connection-string-url: ^2.2.0
     saslprep: ^1.0.3
   dependenciesMeta:
     saslprep:
       optional: true
-  checksum: 8d5a3caf349bdf10d0f14ab73f55e3cc194bc9e0f740a3b0e1e089fa721af725e27d2f4916c837013e1ba2561bded9df11253dae4b1c687c341e876a36ff4815
+  checksum: 3bd32c0afe538ee1c7166b69721941c2fc2fe2c30bada62d3178530942a119d83083a13b9263005f9b468acc5b25df82f848b809a2bb67169ea2074d4ffb4cef
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.0.15":
-  version: 6.0.15
-  resolution: "mongoose@npm:6.0.15"
+"mongoose@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "mongoose@npm:6.1.0"
   dependencies:
     bson: ^4.2.2
     kareem: 2.3.2
-    mongodb: 4.1.4
+    mongodb: 4.2.1
     mpath: 0.8.4
     mquery: 4.0.0
     ms: 2.1.2
     regexp-clone: 1.0.0
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: 22e3b482202cb250a0b6ba9010b8c04b5bc5eff75d8332390aa6557ebd10e6ed0b7258608fc5a4e213509643a750d35ada61a3bbb9c79f15230945a1b0c3d4b0
+  checksum: 51110fbd25ed5d63c45459ddf51983887f02cb4e334db248d0c151f05df36d64694e593e401ce2affde5590ce256d1b38d93adbbadf819ac133c5f63b451ab17
   languageName: node
   linkType: hard
 
@@ -4218,7 +4218,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^6.0.15
+    mongoose: ^6.1.0
     nodemon: ^2.0.15
     tslib: ^2.3.1
     typescript: ^4.4.4
