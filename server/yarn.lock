@@ -3364,45 +3364,45 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb-connection-string-url@npm:^2.2.0":
-  version: 2.2.0
-  resolution: "mongodb-connection-string-url@npm:2.2.0"
+"mongodb-connection-string-url@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "mongodb-connection-string-url@npm:2.3.2"
   dependencies:
     "@types/whatwg-url": ^8.2.1
     whatwg-url: ^11.0.0
-  checksum: 1ebb2235accf0fb9d7916a9e445b8a72f913d7ba613c9ce85d6cffe8d272fef80fd6393847feb6a2fb5de4ccb0f6ae092604315283022459cf1c9582f415a166
+  checksum: 7f400efb1259320f0fe2a0d5565216260fd64e1b66d73eb031ccd2d10124a58c177f7eb1451eee8ee04a01027fa268d9cd2404aa213d23d4e6911b002764c61b
   languageName: node
   linkType: hard
 
-"mongodb@npm:4.2.1":
-  version: 4.2.1
-  resolution: "mongodb@npm:4.2.1"
+"mongodb@npm:4.2.2":
+  version: 4.2.2
+  resolution: "mongodb@npm:4.2.2"
   dependencies:
     bson: ^4.6.0
     denque: ^2.0.1
-    mongodb-connection-string-url: ^2.2.0
+    mongodb-connection-string-url: ^2.3.2
     saslprep: ^1.0.3
   dependenciesMeta:
     saslprep:
       optional: true
-  checksum: 3bd32c0afe538ee1c7166b69721941c2fc2fe2c30bada62d3178530942a119d83083a13b9263005f9b468acc5b25df82f848b809a2bb67169ea2074d4ffb4cef
+  checksum: 645cc8889ee093c0d6479638aa4f5b3e587b84be5179a35993f0796fda6b25d22c4b6f7d5f27b4d23c3aacb694db2ff696ea0a5080ddc745508ffff95131f3b5
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.1.1":
-  version: 6.1.1
-  resolution: "mongoose@npm:6.1.1"
+"mongoose@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "mongoose@npm:6.1.2"
   dependencies:
     bson: ^4.2.2
     kareem: 2.3.2
-    mongodb: 4.2.1
+    mongodb: 4.2.2
     mpath: 0.8.4
     mquery: 4.0.0
     ms: 2.1.2
     regexp-clone: 1.0.0
     sift: 13.5.2
     sliced: 1.0.1
-  checksum: 5c79e7bc5f00a0fe2c58fdf3859c1539009bb35e81a52d45f73e4615dd6424413052726a5a1fa435f86f149a09cb875b53fc323538001c8dc1a23801ff7a1ef6
+  checksum: 27f285b3814f1fc00c5328970cfdd4df187fea802e9e15b8818b555df708672c15f3dbdbbbfdb2e6d17ec79bbb4777d471a7f4bfb2b2b77b129a0d3cb2772da7
   languageName: node
   linkType: hard
 
@@ -4218,7 +4218,7 @@ fsevents@~2.3.2:
     express: ^4.17.1
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^6.1.1
+    mongoose: ^6.1.2
     nodemon: ^2.0.15
     tslib: ^2.3.1
     typescript: ^4.4.4
