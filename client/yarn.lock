@@ -2621,6 +2621,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-redux@npm:^7.1.21":
+  version: 7.1.21
+  resolution: "@types/react-redux@npm:7.1.21"
+  dependencies:
+    "@types/hoist-non-react-statics": ^3.3.0
+    "@types/react": "*"
+    hoist-non-react-statics: ^3.3.0
+    redux: ^4.0.0
+  checksum: 5104e818ef718d2ed454a66da0fd5a61350aa67b948d117f1d93a6135d9808f9f90a60ffcc97a4b008059048cc154a6fc2c24cc57db4e76b6e89e207edb48023
+  languageName: node
+  linkType: hard
+
 "@types/react-router-dom@npm:^5.3.2":
   version: 5.3.2
   resolution: "@types/react-router-dom@npm:5.3.2"
@@ -4619,7 +4631,7 @@ __metadata:
     "@types/node": ^16.11.17
     "@types/react": ^17.0.38
     "@types/react-dom": ^17.0.11
-    "@types/react-redux": ^7.1.20
+    "@types/react-redux": ^7.1.21
     "@types/react-router-dom": ^5.3.2
     axios: ^0.24.0
     dayjs: ^1.10.7
