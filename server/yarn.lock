@@ -989,12 +989,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "bson@npm:4.6.0"
+"bson@npm:^4.6.1":
+  version: 4.6.1
+  resolution: "bson@npm:4.6.1"
   dependencies:
     buffer: ^5.6.0
-  checksum: d38ca1b6c581d8667137c62258f22c0076575879c77f278c08282721844166afc0538d9fb4942976bb320a2e3dec3ddfae57b7ad52845bf7464bf997d3fdc5a2
+  checksum: 32c38400b0c5f85cf22c28b9f9bbc63b3c090c23a749a8c159db975f225161a7fe776f8a18ed1da3f58a9e7496ce2b7935753e9471f17c614bf02ebab145e052
   languageName: node
   linkType: hard
 
@@ -2929,10 +2929,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"kareem@npm:2.3.3":
-  version: 2.3.3
-  resolution: "kareem@npm:2.3.3"
-  checksum: 6acbfeadce9b781844bfce6ecb8f721af2e6453c55e42d14bc9cf337cf4748bc4a084f915c4206e12d33f1c973f65d5010afb6e225b1f772a7b6e40e84da4efc
+"kareem@npm:2.3.4":
+  version: 2.3.4
+  resolution: "kareem@npm:2.3.4"
+  checksum: e12d05e120515c0ded270eb47792e7b1eb3d2656f74a57050e59c8d0a21212c02c7dc5e0acfaa75f89637c5b13d3dfef53218be33c4d3c7d531ef44a68df7478
   languageName: node
   linkType: hard
 
@@ -3302,45 +3302,44 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mongodb-connection-string-url@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "mongodb-connection-string-url@npm:2.3.2"
+"mongodb-connection-string-url@npm:^2.4.1":
+  version: 2.4.2
+  resolution: "mongodb-connection-string-url@npm:2.4.2"
   dependencies:
     "@types/whatwg-url": ^8.2.1
     whatwg-url: ^11.0.0
-  checksum: 7f400efb1259320f0fe2a0d5565216260fd64e1b66d73eb031ccd2d10124a58c177f7eb1451eee8ee04a01027fa268d9cd2404aa213d23d4e6911b002764c61b
+  checksum: aed2718840c79f8d6be35309e308bf4466a009256da6b02e6212abeef39ae27bf6101273580696e246e51ee4f7471e2d938c44e8f8a5194982092f692b37c571
   languageName: node
   linkType: hard
 
-"mongodb@npm:4.2.2":
-  version: 4.2.2
-  resolution: "mongodb@npm:4.2.2"
+"mongodb@npm:4.3.1":
+  version: 4.3.1
+  resolution: "mongodb@npm:4.3.1"
   dependencies:
-    bson: ^4.6.0
+    bson: ^4.6.1
     denque: ^2.0.1
-    mongodb-connection-string-url: ^2.3.2
+    mongodb-connection-string-url: ^2.4.1
     saslprep: ^1.0.3
+    socks: ^2.6.1
   dependenciesMeta:
     saslprep:
       optional: true
-  checksum: 645cc8889ee093c0d6479638aa4f5b3e587b84be5179a35993f0796fda6b25d22c4b6f7d5f27b4d23c3aacb694db2ff696ea0a5080ddc745508ffff95131f3b5
+  checksum: 5684b5481bfbf73e4628b8bad7018cd4436fdb23b9548fb38dece3e079b1716fe870d41070a505d13ae4d86c107315afaf34891ba2b64925eb4fa4cd5bb70300
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.1.4":
-  version: 6.1.4
-  resolution: "mongoose@npm:6.1.4"
+"mongoose@npm:^6.2.3":
+  version: 6.2.3
+  resolution: "mongoose@npm:6.2.3"
   dependencies:
     bson: ^4.2.2
-    kareem: 2.3.3
-    mongodb: 4.2.2
+    kareem: 2.3.4
+    mongodb: 4.3.1
     mpath: 0.8.4
-    mquery: 4.0.0
-    ms: 2.1.2
-    regexp-clone: 1.0.0
-    sift: 13.5.2
-    sliced: 1.0.1
-  checksum: 9878de980e81f4961294b30be1259ce5445812f48fa892520f213a002d0a7148250a9d7be16fdf08a90b0ea4ad98f0c332ad593a47d0db9315e19051051e184f
+    mquery: 4.0.2
+    ms: 2.1.3
+    sift: 16.0.0
+  checksum: d18ff711bf2174255143641a8d37f9a536aa7d445754d9befa461f2bd12b78d29e0cf6ef65f5d8b8ec87959594be541c7cc565227230ae0a3c3a0fe708f62123
   languageName: node
   linkType: hard
 
@@ -3351,14 +3350,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mquery@npm:4.0.0":
-  version: 4.0.0
-  resolution: "mquery@npm:4.0.0"
+"mquery@npm:4.0.2":
+  version: 4.0.2
+  resolution: "mquery@npm:4.0.2"
   dependencies:
     debug: 4.x
-    regexp-clone: ^1.0.0
-    sliced: 1.0.1
-  checksum: bfa776dfe67bb821a8199e02c01e51ca53020c552f3a7a137520e2ce3283b62ba05b50322d173d46f0e04b5eab0e2bdb5003e61019680e267c4776fe866b6306
+  checksum: 39ac308294fe26fe214fd117a9a2e92f754ee00193d3d8602b23c13cf677688faf8417fc74fa18940d51358bf04105ce279364a396b35fd23d73d452f860a098
   languageName: node
   linkType: hard
 
@@ -3913,13 +3910,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"regexp-clone@npm:1.0.0, regexp-clone@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "regexp-clone@npm:1.0.0"
-  checksum: ca4960bbdc4237c84813b12aed351606be7db60a8c8867ef46b44f00eec4e83f51b31de34e294900517db9d7a39636117af80916f6ce7dc45ea00cae3c6d6fc3
-  languageName: node
-  linkType: hard
-
 "regexpp@npm:^3.2.0":
   version: 3.2.0
   resolution: "regexpp@npm:3.2.0"
@@ -4142,7 +4132,7 @@ fsevents@~2.3.2:
     express: ^4.17.2
     helmet: ^4.6.0
     jsonwebtoken: ^8.5.1
-    mongoose: ^6.1.4
+    mongoose: ^6.2.3
     nodemon: ^2.0.15
     tslib: ^2.3.1
     typescript: ^4.5.4
@@ -4191,10 +4181,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sift@npm:13.5.2":
-  version: 13.5.2
-  resolution: "sift@npm:13.5.2"
-  checksum: 31951836c464b995b25f888876dea9c58c7a3eaa419d2ed271776d55db2d1019c6438ee458047d3c16bc93f0a329366dc535dc3a6afc42038949dc2a6a548f61
+"sift@npm:16.0.0":
+  version: 16.0.0
+  resolution: "sift@npm:16.0.0"
+  checksum: 88d5754afe16fbaf4274223e492f4aa382c44070bc63b84b9dcfe0f16f65ff64361c4e642b2ae65dfe33a85170a6ecc378ca44487302a88835f58fe152e62894
   languageName: node
   linkType: hard
 
@@ -4221,17 +4211,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sliced@npm:1.0.1":
-  version: 1.0.1
-  resolution: "sliced@npm:1.0.1"
-  checksum: 84528d23279985ead75809eeec5d601b0fb6bc28348c6627f4feb40747533a1e36a75e8bc60f9079528079b21c434890b397e8fc5c24a649165cc0bbe90b4d70
-  languageName: node
-  linkType: hard
-
 "smart-buffer@npm:^4.1.0":
   version: 4.1.0
   resolution: "smart-buffer@npm:4.1.0"
   checksum: 1db847dcf92c06b36e96aace965e00aec5caccd65c8fd60e0c284c5ad9dabe7f16ef4a60a34dd3c4ccc245a8393071e646fc94fc95f111c25e8513fd9efa6ed5
+  languageName: node
+  linkType: hard
+
+"smart-buffer@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "smart-buffer@npm:4.2.0"
+  checksum: b5167a7142c1da704c0e3af85c402002b597081dd9575031a90b4f229ca5678e9a36e8a374f1814c8156a725d17008ae3bde63b92f9cfd132526379e580bec8b
   languageName: node
   linkType: hard
 
@@ -4253,6 +4243,16 @@ fsevents@~2.3.2:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
   checksum: 2ca9d616e424f645838ebaabb04f85d94ea999e0f8393dc07f86c435af22ed88cb83958feeabd1bb7bc537c635ed47454255635502c6808a6df61af1f41af750
+  languageName: node
+  linkType: hard
+
+"socks@npm:^2.6.1":
+  version: 2.6.2
+  resolution: "socks@npm:2.6.2"
+  dependencies:
+    ip: ^1.1.5
+    smart-buffer: ^4.2.0
+  checksum: dd9194293059d737759d5c69273850ad4149f448426249325c4bea0e340d1cf3d266c3b022694b0dcf5d31f759de23657244c481fc1e8322add80b7985c36b5e
   languageName: node
   linkType: hard
 
