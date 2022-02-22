@@ -3582,10 +3582,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.11.17":
-  version: 16.11.17
-  resolution: "@types/node@npm:16.11.17"
-  checksum: 86ed84f79450f6aba1a6ef09f8407c10076966c3cc7cc4eb3d35b8ae4f47817e525641396ef0a667fa0a88fcdf484f6182812c074601403083bdf3b5e1ac0313
+"@types/node@npm:^16.11.25":
+  version: 16.11.25
+  resolution: "@types/node@npm:16.11.25"
+  checksum: 0b6e25a81364be89256ad1a36341e27b387e646d3186e270108a8bb7b6ecdfdf5ae037aa1c75a5117b8a7509c80093b75431cd5cfcfbc4d553b52e7db2ca272e
   languageName: node
   linkType: hard
 
@@ -5149,7 +5149,7 @@ __metadata:
     "@fortawesome/react-fontawesome": ^0.1.16
     "@sentry/react": ^6.16.1
     "@sentry/tracing": ^6.16.1
-    "@types/node": ^16.11.17
+    "@types/node": ^16.11.25
     "@types/react": ^17.0.38
     "@types/react-dom": ^17.0.11
     "@types/react-redux": ^7.1.21
