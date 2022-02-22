@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { register } from "../redux/actions/authActions";
 import { useAppSelector } from "../redux/types/global";
 
 const Register = () => {
     const { auth, alert } = useAppSelector((state) => state);
-    const history = useHistory();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const initialState = {
@@ -25,8 +25,8 @@ const Register = () => {
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
     useEffect(() => {
-        if (auth.token) history.push("/");
-    }, [auth.token, history]);
+        if (auth.token) navigate("/");
+    }, [auth.token, navigate]);
 
     const handleChangeInput = (e: any) => {
         const { name, value } = e.target;

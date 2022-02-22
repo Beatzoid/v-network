@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { login } from "../redux/actions/authActions";
@@ -10,15 +10,15 @@ const Login = () => {
     const initialState = { email: "", password: "" };
     const [userData, setUserData] = useState(initialState);
     const { email, password } = userData;
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
 
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (auth.token) history.push("/");
-    }, [auth.token, history]);
+        if (auth.token) navigate("/");
+    }, [auth.token, navigate]);
 
     const handleChangeInput = (e: any) => {
         const { name, value } = e.target;
