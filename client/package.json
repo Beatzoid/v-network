@@ -5,8 +5,8 @@
     "dependencies": {
         "@craco/craco": "^6.4.3",
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
-        "@fortawesome/free-regular-svg-icons": "^5.15.4",
-        "@fortawesome/free-solid-svg-icons": "^5.15.4",
+        "@fortawesome/free-regular-svg-icons": "^6.0.0",
+        "@fortawesome/free-solid-svg-icons": "^6.0.0",
         "@fortawesome/react-fontawesome": "^0.1.16",
         "@sentry/react": "^6.16.1",
         "@sentry/tracing": "^6.16.1",
