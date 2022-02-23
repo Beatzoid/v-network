@@ -76,7 +76,7 @@ const EditProfile = ({ setOnEdit }: EditProfileProps) => {
                     <img
                         src={
                             avatar
-                                ? URL.createObjectURL(avatar)
+                                ? URL.createObjectURL(avatar as File)
                                 : auth.user?.avatar
                         }
                         style={{ filter: theme ? "invert(1)" : "invert(0)" }}

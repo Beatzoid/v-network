@@ -24,7 +24,7 @@ const PageRenderer = () => {
         if (id) {
             pageName = `${page}/[id]`;
         } else {
-            pageName = page;
+            pageName = page!;
         }
     }
 

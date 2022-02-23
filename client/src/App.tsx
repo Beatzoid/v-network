@@ -45,12 +45,8 @@ function App() {
                     {auth.token && <Header />}
                     {status && <StatusModal />}
 
-                    <Route
-                        exact
-                        path="/"
-                        component={auth.token ? Home : Login}
-                    />
-                    <Route exact path="/register" component={Register} />
+                    <Route path="/" element={auth.token ? Home : Login} />
+                    <Route path="/register" element={Register} />
 
                     <PrivateRoute
                         exact
