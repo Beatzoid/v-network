@@ -132,6 +132,8 @@ const authController = {
             jwt.verify(
                 refreshToken,
                 process.env.REFRESH_TOKEN_SECRET,
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 async (
                     err: VerifyErrors | null,
                     result: JwtPayload | undefined
