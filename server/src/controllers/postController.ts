@@ -69,8 +69,6 @@ const postController = {
     },
     likePost: async (req: Request, res: Response) => {
         try {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
             const post = await Posts.find({
                 _id: req.params.id,
                 likes: req.user._id

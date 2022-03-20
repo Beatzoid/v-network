@@ -52,8 +52,6 @@ const commentController = {
     },
     likeComment: async (req: Request, res: Response) => {
         try {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
             const comment = await Comments.find({
                 _id: req.params.id,
                 likes: req.user._id

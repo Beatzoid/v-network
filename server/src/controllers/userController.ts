@@ -57,8 +57,6 @@ const userController = {
     },
     follow: async (req: Request, res: Response) => {
         try {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
             const user = await Users.find({
                 _id: req.params.id,
                 followers: req.user._id
