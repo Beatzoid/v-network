@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
@@ -44,20 +44,31 @@ function App() {
                 <div className="main">
                     {auth.token && <Header />}
                     {status && <StatusModal />}
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={auth.token ? <Home /> : <Login />}
+                        />
+                        <Route path="/register" element={<Register />} />
 
-                    <Route path="/" element={auth.token ? Home : Login} />
-                    <Route path="/register" element={Register} />
+                        <Route
+                            path="/:page/:id"
+                            element={
+                                <PrivateRoute>
+                                    <PageRenderer />
+                                </PrivateRoute>
+                            }
+                        />
 
-                    <PrivateRoute
-                        exact
-                        path="/:page/:id"
-                        component={PageRenderer}
-                    />
-                    <PrivateRoute
-                        exact
-                        path="/:page"
-                        component={PageRenderer}
-                    />
+                        <Route
+                            path="/:page"
+                            element={
+                                <PrivateRoute>
+                                    <PageRenderer />
+                                </PrivateRoute>
+                            }
+                        />
+                    </Routes>
                 </div>
             </div>
         </Router>
