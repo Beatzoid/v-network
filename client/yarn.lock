@@ -5375,7 +5375,7 @@ __metadata:
     "@types/react-redux": ^7.1.23
     "@types/react-router-dom": ^5.3.3
     axios: ^0.26.1
-    dayjs: ^1.11.0
+    dayjs: ^1.11.2
     react: ^17.0.2
     react-dom: ^17.0.2
     react-redux: ^7.2.6
@@ -6052,10 +6052,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:^1.11.0":
-  version: 1.11.0
-  resolution: "dayjs@npm:1.11.0"
-  checksum: 2d36f6d71345114cdcd89147adf9e05b4f8fe81684e08c8bf1f86b140aa0b86ecc3cae661a9348d96feb7fbefd03e1bc3697303688e95209670abcb36b4ece15
+"dayjs@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "dayjs@npm:1.11.2"
+  checksum: 78f8bd04a9e5f5554aa06eacda65a7d59e162d39f621a46fd34fb3b51367c3662426d86b4e2f4ac535f81e0c4d5af3e8a83b37e672412eb556267d726c61f8f3
   languageName: node
   linkType: hard
 
