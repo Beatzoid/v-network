@@ -1,5 +1,5 @@
 import argon2 from "argon2";
-import jwt, { JwtPayload, VerifyErrors } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import { Request, Response } from "express";
 
 import logger from "../utils/logger";
@@ -132,10 +132,8 @@ const authController = {
             jwt.verify(
                 refreshToken,
                 process.env.REFRESH_TOKEN_SECRET,
-                async (
-                    err: VerifyErrors | null,
-                    result: JwtPayload | undefined
-                ) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                async (err: any, result: any) => {
                     if (err) {
                         logger.error(err);
                         return res.status(400).json({ err: "Unauthenticated" });
