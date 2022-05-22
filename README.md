@@ -1,3 +1,7 @@
+# Depreciation
+
+This repositiory is in a very broken state and is too much of a hassle to debug. Therefore, I am rewriting the whole project [here](https://github.com/Beatzoid/v-network-rewrite) and once that is done and working it will be merged into this repo. Until then, this repo will be archived.
+
 # V-Network
 
 A social media app made using the MERN stack
